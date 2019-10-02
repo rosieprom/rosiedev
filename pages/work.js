@@ -14,6 +14,7 @@ function WorkPage() {
                 textColor="text-black"
                 bigTitle="Work Experience and Projects"
             />
+            
         </Layout>
       </>
     )
