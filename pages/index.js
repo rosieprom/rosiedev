@@ -1,8 +1,5 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 import MainHeader from '../components/mainHeader'
-import Navigation from '../components/Navigation';
-import fetch from 'isomorphic-unfetch';
-
 function IndexPage() {
     return (
       <>

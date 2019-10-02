@@ -1,8 +1,6 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 import AboutSection from '../components/aboutSection'
-import Navigation from '../components/Navigation';
-import Link from 'next/link';
-import fetch from 'isomorphic-unfetch';
+import Navigation from '../components/Navigation'
 
 function AboutPage() {
     return (

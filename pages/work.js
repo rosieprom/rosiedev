@@ -1,8 +1,6 @@
 import Layout from '../components/Layout';
 import WorkSection from '../components/WorkSection'
 import Navigation from '../components/Navigation';
-import Link from 'next/link';
-import fetch from 'isomorphic-unfetch';
 
 function WorkPage() {
     return (
