@@ -1,6 +1,6 @@
-import Layout from '../components/Layout'
+import Layout from '../components/layout'
 import AboutSection from '../components/aboutSection'
-import Navigation from '../components/Navigation'
+import Navigation from '../components/navigation'
 
 function AboutPage() {
     return (

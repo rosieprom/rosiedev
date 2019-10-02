@@ -1,5 +1,5 @@
-import Layout from '../components/Layout';
-import Navigation from '../components/Navigation';
+import Layout from '../components/layout';
+import Navigation from '../components/navigation';
 import VolunteeringSection from '../components/volunteeringSection';
 
 function VolunteeringPage() {
