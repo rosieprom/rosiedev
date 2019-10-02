@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 const AboutSection = (props) => (
       <div class={`items-center justify-center h-screen ${props.bgColor}`}>
             <div class="container mx-auto flex items-center content-center"> 
