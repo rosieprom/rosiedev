@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import Cards from '../components/cards'
 
 const WorkSection = (props) => (

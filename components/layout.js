@@ -1,6 +1,5 @@
 import React from 'react'
 import "../styles/index.css"
-import Footer from './Footer';
 import Head from 'next/head';
 //import { initGA, logPageView } from '../utils/analytics'
 

@@ -1,6 +1,6 @@
-import Layout from '../components/layout';
-import WorkSection from '../components/workSection'
-import Navigation from '../components/navigation';
+import Layout from '../components/Layout';
+import WorkSection from '../components/WorkSection'
+import Navigation from '../components/Navigation';
 
 function WorkPage() {
     return (

@@ -1,5 +1,5 @@
-import Layout from '../components/layout'
-import MainHeader from '../components/mainHeader'
+import Layout from '../components/Layout'
+import MainHeader from '../components/MainHeader'
 function IndexPage() {
     return (
       <>
