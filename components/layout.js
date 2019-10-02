@@ -49,7 +49,6 @@ export default class Layout extends React.Component {
         <main className="min-w-full sm:min-w-full md:min-w-full lg:min-w-full xl:min-w-full">
           {this.data.children}
         </main>
-        <Footer />
       </div>
     )
   }

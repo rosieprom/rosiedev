@@ -275,13 +275,7 @@ function (_React$Component) {
           lineNumber: 49
         },
         __self: this
-      }, this.data.children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }));
+      }, this.data.children));
     }
   }]);
 
@@ -310,26 +304,41 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 function Navigation() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      menuOpen = _useState[0],
+      toggleMenu = _useState[1];
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("nav", {
-    "class": "flex items-center justify-between flex-wrap bg-transparent p-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx("div", {
-    "class": "block lg:hidden",
+    "class": "bg-white fixed w-full z-30 top-0 text-black p-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, __jsx("button", {
-    "class": "flex items-center px-3 py-2 border rounded text-black border-black hover:text-white hover:border-white",
+  }, __jsx("div", {
+    "class": "w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
+    },
+    __self: this
+  }, __jsx("div", {
+    "class": "block lg:hidden pr-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("button", {
+    "class": "flex items-center px-3 py-2 border rounded text-black border-black hover:text-purple-800 hover:border-purple-800 appearance-none focus:outline-none",
+    onClick: function onClick() {
+      return toggleMenu(!menuOpen);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
     },
     __self: this
   }, __jsx("svg", {
@@ -338,103 +347,155 @@ function Navigation() {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: this
   }, "Menu"), __jsx("path", {
     d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 15
     },
     __self: this
   })))), __jsx("div", {
-    "class": "w-full block flex-grow lg:flex lg:items-center lg:w-auto",
+    "class": "".concat(menuOpen ? "block" : "hidden", " w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"),
+    id: "nav-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 19
     },
     __self: this
-  }, __jsx("div", {
-    "class": "text-sm lg:flex-grow",
+  }, __jsx("ul", {
+    "class": "list-reset lg:flex justify-end flex-1 items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 24
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 25
     },
     __self: this
-  }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Home"))), __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/work",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 29
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 30
     },
     __self: this
-  }, "Work")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Work"))), __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/volunteering",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 34
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 35
     },
     __self: this
-  }, "Volunteering")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Volunteering"))), __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 39
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
     },
     __self: this
-  }, "About"))))));
+  }, "About")))), __jsx("a", {
+    href: "/static/RosalindaProm_CV_Sept2019.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("a", {
+    "class": "block mt-4 lg:inline-block lg:mt-0 mr-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("button", {
+    "class": "bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "Download Resume")))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
 
 /***/ }),
 
-/***/ "./components/sectionHeader.js":
-/*!*************************************!*\
-  !*** ./components/sectionHeader.js ***!
-  \*************************************/
+/***/ "./components/WorkSection.js":
+/*!***********************************!*\
+  !*** ./components/WorkSection.js ***!
+  \***********************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -444,58 +505,227 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/rosalieprom/Documents/GitHub/rosiedev/components/sectionHeader.js";
+/* harmony import */ var _components_cards__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/cards */ "./components/cards.js");
+var _jsxFileName = "/Users/rosalieprom/Documents/GitHub/rosiedev/components/WorkSection.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-var MainHeader = function MainHeader(props) {
+
+var WorkSection = function WorkSection(props) {
   return __jsx("div", {
     "class": "items-center justify-center h-screen ".concat(props.bgColor),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, __jsx("div", {
-    "class": "container mx-auto flex items-center content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
   }, __jsx("div", {
-    "class": " flex flex-col my-64 w-full self-center justify-center items-start text-center sm:text-left ".concat(props.textColor),
+    "class": "container mx-auto flex items-center content-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 6
+    },
+    __self: this
+  }, __jsx("div", {
+    "class": " flex flex-col my-32 w-full self-center justify-center items-start text-center sm:text-left ".concat(props.textColor),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
     },
     __self: this
   }, __jsx("p", {
     "class": "uppercase tracking-loose w-full text-base m-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     },
     __self: this
   }, props.smallTitle), __jsx("h1", {
     "class": "my-4 font-bold leading-tight text-6xl m-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     },
     __self: this
   }, props.bigTitle), __jsx("p", {
     "class": "leading-normal mb-8 text-lg m-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     },
     __self: this
-  }, props.description))));
+  }, props.description), __jsx(_components_cards__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    projects: [{
+      image: "/static/alphawalletweb.png",
+      alt: "AlphaWallet",
+      name: "AlphaWallet",
+      tech: "JAM Stack Website",
+      description: "AlphaWallet is one of the first native blockchain cryptocurrency wallets adopting TokenScript. I had the pleasure of designing and developing their website and SEO.",
+      url: "https://alphawallet.com",
+      urlDescription: "Website"
+    }, {
+      image: "/static/wieitsymposiumweb.png",
+      alt: "Women in Engineering and IT Symposium",
+      name: "Women in Engineering and IT Symposium",
+      tech: "HTML/CSS Website",
+      description: "This was a joint inter-university event hosted by UTS and UQ to bring together Female leaders in tech and educate on diversity and things.",
+      url: "http://womeninenganditsymposium.org.au/",
+      urlDescription: "Website"
+    }, {
+      image: "/static/progsocweb.png",
+      alt: "ProgSoc",
+      name: "ProgSoc 2019",
+      tech: "Gatsby ReactJS Markdown",
+      description: "This was a hobby project I did with my Executive team in hopes it would bring a fresh new look to ProgSoc's current website.",
+      url: "https://progsoc.netlify.com",
+      urlDescription: "Website"
+    }, {
+      image: "/static/developerpeachyweb.png",
+      alt: "Developerpeachy",
+      name: "DeveloperPeachy",
+      tech: "Jekyll Ruby Markdown",
+      description: "I was looking for a fresh new website and did this using a Jekyll theme, Github pages guide and some cool markdown.",
+      url: "https://developerpeachy.github.io",
+      urlDescription: "Website"
+    }, {
+      image: "/static/arduinoproject.jpeg",
+      alt: "UTS Build 2019",
+      name: "UTS Build Abroad @ TUB",
+      tech: "Studied abroad in Berlin!",
+      description: "As a part of my degree, I decided to go overseas and study some electronics while retaining the knowledge I had of physical prototyping, so I created this thing while I was there.",
+      url: "https://www.instagram.com/p/B0A8PjJAWbb/",
+      urlDescription: "Instagram Post"
+    }],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }))));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (MainHeader);
+/* harmony default export */ __webpack_exports__["default"] = (WorkSection);
+
+/***/ }),
+
+/***/ "./components/cards.js":
+/*!*****************************!*\
+  !*** ./components/cards.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/rosalieprom/Documents/GitHub/rosiedev/components/cards.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function Cards(props) {
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("div", {
+    "class": "flex flex-wrap",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, props.projects.map(function (project, index) {
+    return __jsx("div", {
+      "class": "p-4",
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, __jsx("div", {
+      "class": "max-w-sm rounded overflow-hidden shadow-lg",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, __jsx("img", {
+      "class": "w-full",
+      src: project.image,
+      alt: project.alt,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }), __jsx("div", {
+      "class": "px-6 py-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, __jsx("h2", {
+      "class": "font-bold text-xl mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, project.name), __jsx("div", {
+      "class": "uppercase tracking-loose mb-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, project.tech), __jsx("div", {
+      "class": "text-gray-700 text-base",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, project.description), __jsx("div", {
+      "class": "w-full self-center flex justify-center py-4",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx("div", {
+      "class": "flex-none",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, __jsx("a", {
+      href: project.url,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, __jsx("button", {
+      "class": "bg-purple-200 hover:bg-purple-400 text-gray-800 font-bold py-2 px-4 rounded-full inline-flex items-center mr-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, project.urlDescription))))))));
+  })));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Cards);
 
 /***/ }),
 
@@ -11430,7 +11660,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Layout */ "./components/Layout.js");
-/* harmony import */ var _components_sectionHeader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/sectionHeader */ "./components/sectionHeader.js");
+/* harmony import */ var _components_WorkSection__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/WorkSection */ "./components/WorkSection.js");
 /* harmony import */ var _components_Navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Navigation */ "./components/Navigation.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
@@ -11458,10 +11688,11 @@ function WorkPage() {
       lineNumber: 11
     },
     __self: this
-  }), __jsx(_components_sectionHeader__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }), __jsx(_components_WorkSection__WEBPACK_IMPORTED_MODULE_2__["default"], {
     bgColor: "bg-white",
     textColor: "text-black",
     bigTitle: "Work Experience and Projects",
+    description: "Some of these projects are voluntary and some are contract based work. Feel free to email me for more information.",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12

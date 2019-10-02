@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -368,13 +368,7 @@ function (_React$Component) {
           lineNumber: 49
         },
         __self: this
-      }, this.data.children), __jsx(_Footer__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 52
-        },
-        __self: this
-      }));
+      }, this.data.children));
     }
   }]);
 
@@ -403,26 +397,41 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 function Navigation() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      menuOpen = _useState[0],
+      toggleMenu = _useState[1];
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("nav", {
-    "class": "flex items-center justify-between flex-wrap bg-transparent p-6",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx("div", {
-    "class": "block lg:hidden",
+    "class": "bg-white fixed w-full z-30 top-0 text-black p-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
     },
     __self: this
-  }, __jsx("button", {
-    "class": "flex items-center px-3 py-2 border rounded text-black border-black hover:text-white hover:border-white",
+  }, __jsx("div", {
+    "class": "w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
+    },
+    __self: this
+  }, __jsx("div", {
+    "class": "block lg:hidden pr-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("button", {
+    "class": "flex items-center px-3 py-2 border rounded text-black border-black hover:text-purple-800 hover:border-purple-800 appearance-none focus:outline-none",
+    onClick: function onClick() {
+      return toggleMenu(!menuOpen);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
     },
     __self: this
   }, __jsx("svg", {
@@ -431,93 +440,145 @@ function Navigation() {
     xmlns: "http://www.w3.org/2000/svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: this
   }, "Menu"), __jsx("path", {
     d: "M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 15
     },
     __self: this
   })))), __jsx("div", {
-    "class": "w-full block flex-grow lg:flex lg:items-center lg:w-auto",
+    "class": "".concat(menuOpen ? "block" : "hidden", " w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"),
+    id: "nav-content",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 19
     },
     __self: this
-  }, __jsx("div", {
-    "class": "text-sm lg:flex-grow",
+  }, __jsx("ul", {
+    "class": "list-reset lg:flex justify-end flex-1 items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 22
+    },
+    __self: this
+  }, __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 24
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 25
     },
     __self: this
-  }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Home"))), __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/work",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 29
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 30
     },
     __self: this
-  }, "Work")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Work"))), __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/volunteering",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 34
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 35
     },
     __self: this
-  }, "Volunteering")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
+  }, "Volunteering"))), __jsx("li", {
+    "class": "mr-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_0___default.a, {
     href: "/about",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 39
     },
     __self: this
   }, __jsx("a", {
-    "class": "block mt-4 lg:inline-block lg:mt-0 text-black hover:text-blue-500 mr-4",
+    "class": "inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
     },
     __self: this
-  }, "About"))))));
+  }, "About")))), __jsx("a", {
+    href: "/static/RosalindaProm_CV_Sept2019.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, __jsx("a", {
+    "class": "block mt-4 lg:inline-block lg:mt-0 mr-4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, __jsx("button", {
+    "class": "bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-full",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, "Download Resume")))))));
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
@@ -607,7 +668,7 @@ var MainHeader = function MainHeader(props) {
     },
     __self: this
   }, __jsx("button", {
-    "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
+    "class": "bg-purple-300 hover:bg-purple-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
@@ -650,7 +711,7 @@ var MainHeader = function MainHeader(props) {
     },
     __self: this
   }, __jsx("button", {
-    "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
+    "class": "bg-purple-300 hover:bg-purple-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
@@ -686,14 +747,16 @@ var MainHeader = function MainHeader(props) {
     },
     __self: this
   }, __jsx("a", {
-    href: "",
+    href: "/static/RosalindaProm_CV_Sept2019.pdf",
+    target: "_blank",
+    rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
   }, __jsx("button", {
-    "class": "bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
+    "class": "bg-purple-300 hover:bg-purple-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
@@ -2739,7 +2802,7 @@ function IndexPage() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

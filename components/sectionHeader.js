@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const MainHeader = (props) => (
+const SectionHeader = (props) => (
       <div class={`items-center justify-center h-screen ${props.bgColor}`}>
             <div class="container mx-auto flex items-center content-center"> 
                 <div class={` flex flex-col my-64 w-full self-center justify-center items-start text-center sm:text-left ${props.textColor}`}>
@@ -14,4 +14,4 @@ const MainHeader = (props) => (
         </div>
 );
 
-export default MainHeader;
+export default SectionHeader;

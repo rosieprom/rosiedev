@@ -1,18 +1,17 @@
 import Layout from '../components/Layout';
-import SectionHeader from '../components/sectionHeader'
 import Navigation from '../components/Navigation';
-import Link from 'next/link';
-import fetch from 'isomorphic-unfetch';
+import VolunteeringSection from '../components/volunteeringSection';
 
 function VolunteeringPage() {
     return (
       <>
         <Layout>
             <Navigation />
-            <SectionHeader 
+            <VolunteeringSection
                 bgColor="bg-white"
                 textColor="text-black"
-                bigTitle="Volunteering"
+                bigTitle="Volunteering and Acheivements"
+                description="As a student and a young technologist, I've always found myself immersed with the developer community in some way. Here are some of the photos that I've kept over the years to remember these tiny wins."
             />
         </Layout>
       </>
