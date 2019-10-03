@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react' 
 
 const MainHeader = (props) => (
       <div class={`items-center justify-center h-screen ${props.bgColor}`}>

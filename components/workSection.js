@@ -1,4 +1,5 @@
 import Cards from '../components/cards'
+import React from 'react'
 
 const WorkSection = (props) => (
       <div class={`items-center justify-center h-screen ${props.bgColor}`}>
