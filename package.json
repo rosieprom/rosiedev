@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "serve": "serve ./out",
-    "export": "cp static/robots.txt robots.txt && next build && next export"
+    "export": "npm run build && next export"
   },
   "eslintConfig": {
     "extends": "react-app"
