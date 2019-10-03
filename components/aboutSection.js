@@ -1,6 +1,7 @@
 import React from 'react'
 
-const AboutSection = (props) => (
+function AboutSection (props) {
+    return (
     <>
       <div class={`items-center justify-center h-screen ${props.bgColor}`}>
             <div class="container mx-auto flex items-center content-center"> 
@@ -49,6 +50,7 @@ const AboutSection = (props) => (
             </div>
         </div>
     </>
-);
+    )
+};
 
 export default AboutSection;

@@ -1,8 +1,11 @@
 import Cards from './Cards'
 import React from 'react'
 
-const WorkSection = (props) => (
-      <div class={`items-center justify-center h-screen ${props.bgColor}`}>
+function WorkSection (props){
+    return (
+        <>
+
+<div class={`items-center justify-center h-screen ${props.bgColor}`}>
             <div class="container mx-auto flex items-center content-center"> 
                 <div class={` flex flex-col my-32 w-full self-center justify-center items-start text-center sm:text-left ${props.textColor}`}>
                     <p class="uppercase tracking-loose w-full text-base m-2">{props.smallTitle}</p>
@@ -66,6 +69,8 @@ const WorkSection = (props) => (
                 </div>
             </div>
         </div>
-);
 
+        </>
+    )
+}
 export default WorkSection;
