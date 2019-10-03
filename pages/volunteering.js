@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Navigation from '../components/Navigation';
 import VolunteeringSection from '../components/VolunteeringSection';
+import React from 'react'
 
 function VolunteeringPage() {
     return (

@@ -1,6 +1,7 @@
 import Layout from '../components/Layout'
 import AboutSection from '../components/AboutSection'
 import Navigation from '../components/Navigation'
+import React from 'react'
 
 function AboutPage() {
     return (

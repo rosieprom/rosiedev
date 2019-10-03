@@ -1,5 +1,7 @@
 import Layout from '../components/Layout'
 import MainHeader from '../components/MainHeader'
+import React from 'react'
+
 function IndexPage() {
     return (
       <>

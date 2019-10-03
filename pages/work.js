@@ -1,6 +1,7 @@
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
 import WorkSection from '../components/WorkSection'
-import Navigation from '../components/Navigation';
+import Navigation from '../components/Navigation'
+import React from 'react'
 
 function WorkPage() {
     return (
