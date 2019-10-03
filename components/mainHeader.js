@@ -3,7 +3,7 @@ import React from 'react'
 
 function MainHeader (props) {
     return (
-        <div class={`items-center justify-center h-screen ${props.bgColor}`}>
+        <div class={`items-center justify-center h-min-screen ${props.bgColor}`}>
             <div class="container mx-auto flex items-center content-center"> 
                 <div class={` flex flex-col my-64 w-full self-center justify-center items-start text-center sm:text-left ${props.textColor}`}>
                     <p class="uppercase tracking-loose w-full text-base m-2">{props.smallTitle}</p>
