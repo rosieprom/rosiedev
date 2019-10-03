@@ -5,7 +5,6 @@ import React from 'react'
 
 function AboutPage() {
     return (
-      <>
         <Layout>
           <Navigation />
           <AboutSection 
@@ -20,7 +19,6 @@ function AboutPage() {
             descriptionThree="Feel free to catch up on either of my social media channels."
           />
         </Layout>
-      </>
     )
   }
   
