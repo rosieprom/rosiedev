@@ -1,4 +1,4 @@
-import Cards from '../components/cards'
+import Cards from './Cards'
 import React from 'react'
 
 const VolunteeringSection = (props) => (
