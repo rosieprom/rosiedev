@@ -35,11 +35,11 @@ function Navigation () {
                   <a class="inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4">Volunteering</a>
                 </Link>
               </li>
-              {/* <li class="mr-3">
+              <li class="mr-3">
                 <Link href="/about">
                   <a class="inline-block text-black no-underline hover:text-purple-800 hover:text-underline py-2 px-4">About</a>
                 </Link>
-              </li> */}
+              </li>
             </ul>
             <a href="/static/RosalindaProm_CV_Sept2019.pdf" target="_blank" rel="noopener noreferrer">
               <a class="block mt-4 lg:inline-block lg:mt-0 mr-4">
