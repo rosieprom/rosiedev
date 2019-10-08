@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+import Layout from '../components/Layout'
+import MainHeader from '../components/MainHeader'
+
 function IndexPage () {
   return (
     <>

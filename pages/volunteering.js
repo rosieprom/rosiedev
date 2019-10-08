@@ -1,3 +1,8 @@
+/* eslint-disable no-unused-vars */
+import Layout from '../components/Layout'
+import Navigation from '../components/Navigation'
+import VolunteeringSection from '../components/VolunteeringSection'
+
 function VolunteeringPage () {
   return (
     <>
