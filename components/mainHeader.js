@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import Link from 'next/link'
+
 function MainHeader (props) {
   return (
     <div class={`items-center justify-center min-h-screen ${props.bgColor}`}>

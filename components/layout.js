@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
+import NextHead from 'next/head'
 import '../styles/index.css'
 // import { initGA, logPageView } from '../utils/analytics'
 
@@ -19,7 +21,7 @@ export default class Layout extends React.Component {
   render () {
     return (
       <div className="flex flex-col min-h-screen min-w-full">
-        <Head>
+        <NextHead>
           <meta charset="utf-8" />
           <link rel="icon" type="image/png" href="/static/favicon.ico" />
           <link rel="apple-touch-icon" href="/static/favicon.ico" />
@@ -43,7 +45,7 @@ export default class Layout extends React.Component {
           <meta property="og:site_name" content="Rosalie Prom" />
           <meta property="og:url" content="https://www.rosalie.dev" />
           <title>Rosalie Prom</title>
-        </Head>
+        </NextHead>
         <main className="min-w-full sm:min-w-full md:min-w-full lg:min-w-full xl:min-w-full">
           {this.data.children}
         </main>

@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+import Cards from './Cards'
+
 function WorkSection (props) {
   return (
     <>
