@@ -1,6 +1,6 @@
-import Link from "next/link"
-import React from "react"
-import { useState } from "react"
+import Link from 'next/link'
+import { useState } from React from 'react';
+
 
 function Navigation() {
   const [menuOpen, toggleMenu] = useState(false);
@@ -17,7 +17,7 @@ function Navigation() {
             </button>
           </div>
           <div class={`${
-                  menuOpen ? `block` : `hidden`
+                  menuOpen ? 'block' : 'hidden'
                 } w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20`} id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
             <li class="mr-3">
