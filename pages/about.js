@@ -12,12 +12,14 @@ function AboutPage() {
             bgColor="bg-white"
             textColor="text-black"
             bigTitle="Hi, I'm Rosie."
-            descriptionOne="My journey started off in Blogging on Tumblr when I was fifthteen. I enjoyed it so much that I didn't perform 
-            well in my other subjects. I saw this as an opportunity to break through and get into tech. Post HSC, I went to TAFE to study 
-            web development, networking and programming from scratch for two years and then I chose to study IT at UTS. I'm now about to graduate
-            with some experience and have had opportunity to volunteer and encourage younger people to take on a career in tech. "
-            descriptionTwo="Some of my experience has been primarily web development and front end things, however, I aspire to be a full stack developer."
-            descriptionThree="Feel free to catch up on either of my social media channels."
+            descriptionOne="My journey started off tinkering with Tumblr in high school. It turned into a hobby of which I was inspired to make a career out of. 
+            I graduated high school and went straight into TAFE to study IT Support and Programming. I had then came to 
+            the University of Technology, Sydney to study Bachelor of Science in IT. 
+            University has opened up doors of opportunity for me and through this, I had become more empowered to become the best developer I could be."
+            descriptionTwo="Some of my experience has been primarily web development and front end things, however, I aspire to be a full stack developer. 
+            Blockchain technology interests me and so does Fintech, however, no matter the project, I'm mostly fascinated by anything."
+            descriptionThree="My mission is to empower many people to get into tech. I envision that tech will be more diverse in the future, and I aspire to be a 
+            change maker."
           />
         </Layout>
       </>
