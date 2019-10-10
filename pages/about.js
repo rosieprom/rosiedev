@@ -9,8 +9,6 @@ function AboutPage () {
       <Layout>
         <Navigation />
         <AboutSection
-          bgColor="bg-white"
-          textColor="text-black"
           bigTitle="Hi, I'm Rosie."
           descriptionOne="My journey started off tinkering with Tumblr in high school. It turned into a hobby of which I was inspired to make a career out of.
             I graduated high school and went straight into TAFE to study IT Support and Programming. I had then came to

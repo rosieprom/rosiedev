@@ -4,7 +4,6 @@ import Cards from './Cards'
 function WorkSection (props) {
   return (
     <>
-
       <div class={`items-center justify-center h-screen ${props.bgColor}`}>
         <div class="container mx-auto flex items-center content-center">
           <div class={` flex flex-col my-32 w-full self-center justify-center items-start text-center sm:text-left ${props.textColor}`}>

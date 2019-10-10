@@ -1,9 +1,9 @@
 function AboutSection (props) {
   return (
     <>
-      <div class={`items-center justify-center h-screen ${props.bgColor}`}>
+      <div class="items-center justify-center h-screen bg-white">
         <div class="container mx-auto flex items-center content-center">
-          <div class={` flex flex-col my-32 w-full self-center justify-center items-start text-center sm:text-left ${props.textColor}`}>
+          <div class="flex flex-col my-32 w-full self-center justify-center items-start text-center sm:text-left text-black">
             <img class="w-56 h-56 rounded-full self-center" src="/static/headshot.jpg" alt="Rosalie Prom" />
             <p class="uppercase tracking-loose w-full self-center text-base sm:p-4 md:px-8">{props.smallTitle}</p>
             <h1 class="my-4 font-bold leading-tight self-center text-4xl sm:p-4 md:px-8">{props.bigTitle}</h1>
