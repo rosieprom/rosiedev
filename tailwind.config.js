@@ -8,7 +8,7 @@ module.exports = {
     },
     fontFamily: {
       display: ['Futura', 'sans-serif'],
-      body: ['Helvetica', 'sans-serif'],
+      body: ['Helvetica', 'sans-serif']
     },
     extend: {
       colors: {
@@ -21,8 +21,8 @@ module.exports = {
         accentlightpurple: '#4B2683',
         accentorange: '#FCB13B',
         accentgray: '#C4C4C4'
-      },
-    },
+      }
+    }
   },
   variants: {},
   plugins: []

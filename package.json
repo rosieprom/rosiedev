@@ -46,6 +46,8 @@
     "eslint-plugin-standard": "^4.0.1",
     "postcss-easy-import": "^3.0.0",
     "tailwindcss": "1.1.2",
-    "tailwindcss-plugins": "^0.3.0"
+    "tailwindcss-plugins": "^0.3.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
