@@ -1,2 +1,6 @@
-# rosiedev
- Rosie's new website!!
+# rosie.dev
+Rosie's new Website!
+
+Built with NextJS, React, TailwindCSS and hosted on Now.sh
+
+

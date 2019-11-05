@@ -1,8 +1,7 @@
 {
-  "name": "rosiedev",
+  "name": "rosiedev2",
   "version": "1.0.0",
-  "private": true,
-  "description": "Rosalie's new website yay!",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "next",
