@@ -2,16 +2,8 @@
 import React from 'react'
 import NextHead from 'next/head'
 import '../styles/index.css'
-// import { initGA, logPageView } from '../utils/analytics'
 
 export default class Layout extends React.Component {
-//   componentDidMount () {
-//     if (!window.GA_INITIALIZED) {
-//       initGA()
-//       window.GA_INITIALIZED = true
-//     }
-//     logPageView()
-//   }
 
   constructor (props) {
     super(props)
