@@ -5,12 +5,12 @@ function Home() {
     <Layout>
       <div className="flex justify-center pt-32">
         <h1 className="font-bold font-mono text-6xl">
-          I'm Rosalie
+          Rosalie Prom
         </h1>
       </div>
       <div className="flex justify-center pt-8">
-        <p className="font-normal font-mono text-xl">
-          and I do Front-End Development and UX/UI Design.
+        <p className="font-normal font-mono text-xl text-center">
+          a University Graduate, aspiring front-end developer and UX/UI designer.
         </p>
       </div>
     </Layout>
