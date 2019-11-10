@@ -4,7 +4,7 @@ function Home() {
   return (
     <Layout>
       <div className="flex justify-center pt-32">
-        <h1 className="font-bold font-mono text-6xl">
+        <h1 className="font-bold font-mono text-6xl text-center">
           Rosalie Prom
         </h1>
       </div>

@@ -8,9 +8,9 @@ function About() {
           About Rosalie
         </h1>
       </div>
-      <div className="flex justify-start pt-8">
+      <div className="flex justify-start pt-4">
         <p className="font-normal font-mono text-l">
-          I'm a recent university graduate who studied {" "}
+          I'm a university graduate who studied {" "}
             <text className="text-red-500">
             Information Technology at the University of Technology, Sydney.
             </text> As a student, I have also been a leader of student societies and an active member of Women in Engineering and IT.
