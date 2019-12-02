@@ -36,7 +36,7 @@ function About() {
       </div>
       <div className="flex justify-start pt-8 pb-32">
           <a href="/static/RosalindaProm_CV.pdf" target="_blank" rel="noopener noreferrer">
-            <button class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
+            <button class="bg-black hover:bg-gray-800 font-sans text-white font-bold py-2 px-4 rounded-full inline-flex items-center">
                 <span>Download Resume</span>
             </button>
           </a>
