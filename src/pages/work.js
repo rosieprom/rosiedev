@@ -1,14 +1,20 @@
 import Layout from "../components/layout";
 import Cards from "../components/cards";
+import SocialBar from "../components/socialBar";
 
 function Work() {
   return (
     <Layout>
-      <div className="flex justify-start pt-10">
-        <h1 className="font-bold font-mono text-4xl md:text-6xl">
-          Achievements, Projects and Work.
-        </h1>
-      </div>
+          <div className="flex justify-start pt-20 px-4">
+               <h1 className="font-bold font-mono md:text-4xl text-3xl">
+                    Acheivements, Projects and Work.
+               </h1>
+          </div>
+          <div className="flex justify-start p-4">
+               <p className="font-normal font-mono text-l">
+                    A little bit of volunteering, community work, projects and random accomplishments I did. 
+               </p>
+          </div>
       <Cards
        items ={[
            {
@@ -83,6 +89,9 @@ function Work() {
            }
        ]}
       />
+
+      <SocialBar />
+
     </Layout>
   );
 }

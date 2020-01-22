@@ -17,7 +17,7 @@ function Cards(props) {
                         <div class="flex px-6 py-4">
                             {item.url  ?
                             <a href={item.url} target="_blank" rel="noopener noreferrer">
-                                <button class="bg-black hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full inline-flex font-sans items-center">
+                                <button class="bg-black hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full inline-flex font-sans items-center">
                                     <span>{item.linkName}</span>
                                 </button>
                                 </a> 
@@ -25,7 +25,7 @@ function Cards(props) {
                             
                             {item.urlTwo  ?
                             <a href={item.urlTwo} target="_blank" rel="noopener noreferrer">
-                                <button class="bg-black hover:bg-purple-800 text-white font-bold py-2 px-4 rounded-full inline-flex font-sans items-center mx-4">
+                                <button class="bg-black hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full inline-flex font-sans items-center mx-4">
                                     <span>{item.linkNameTwo}</span>
                                 </button>
                                 </a> 
