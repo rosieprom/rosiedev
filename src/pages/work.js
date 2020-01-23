@@ -7,7 +7,7 @@ function Work() {
     <Layout>
           <div className="flex justify-start pt-20 px-4">
                <h1 className="font-bold font-mono md:text-4xl text-3xl">
-                    Acheivements, Projects and Work.
+               Achievements, Projects and Work.
                </h1>
           </div>
           <div className="flex justify-start p-4">

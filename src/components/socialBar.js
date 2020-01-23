@@ -1,6 +1,6 @@
 function SocialBar() {
     return (
-      <div class="flex sm:flex-wrap justify-center">
+      <div class="flex sm:flex-wrap justify-center p-8">
             {/* Twitter */}
             <div class="w-1/9 pr-2 md:pr-4">
                 <a class="hover:bg-white" href="https://twitter.com/rosalie_dev" target="_blank">
