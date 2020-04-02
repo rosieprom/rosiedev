@@ -1,16 +1,11 @@
-import Header from "./header";
-import Footer from "./footer";
-import "../style.css";
+import styled from "styled-components";
 
-function Layout(props) {
-  return (
-    <div className="flex flex-col min-h-screen">
-        <Header />
-        <main className="flex-1 max-w-4xl mx-auto md:px-8 md:py-16 xs:px-12 w-full">
-            {props.children}
-        </main>
-    </div>
-  );
-}
+const Layout = styled.div`
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export default Layout;
