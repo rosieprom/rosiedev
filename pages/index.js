@@ -9,16 +9,17 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 600;
   text-align: center;
+  font-family: "FiraSans";
 `;
 
 const AboutText = styled.p`
   font-weight: 400;
   text-align: center;
+  font-family: "Montserrat";
 `;
 
-function Home() {
+const Home = ({}) => {
   return (
     <Layout>
       <Header />
@@ -32,6 +33,6 @@ function Home() {
       </Container>
     </Layout>
   );
-}
+};
 
 export default Home;
