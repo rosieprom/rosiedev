@@ -123,9 +123,9 @@ function Header() {
       </MenuIcon>
       <Links open={open}>
         {[
-          { title: "Home", route: "/" },
-          { title: "About", route: "/about" },
-          { title: "Work", route: "/work" }
+          { title: "Rosalie Prom", route: "/" },
+          { title: "Projects", route: "/projects" },
+          { title: "Volunteering", route: "/volunteering" }
         ].map(navigationItem => (
           <PageLink key={navigationItem.title}>
             <Link href={navigationItem.route}>

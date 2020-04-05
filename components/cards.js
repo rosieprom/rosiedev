@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
 
 const Card = styled.div`
   padding: 1rem;
@@ -12,6 +11,7 @@ const Card = styled.div`
 
   @media (max-width: 700px) {
     display: block;
+    margin: 0;
   }
 `;
 
