@@ -1,20 +1,44 @@
-function Footer() {
-    return (
-      <footer className="bg-black">
-          <div class="mx-auto">
-            <div class="w-full flex flex-col md:flex-row py-6">
-                <div className="flex-1 sm:flex-wrap">
-                    <p className="font-sans inline-block md:block py-4 text-white text-center">
-                        Created by  {" "}
-                        <a href="https://github.com/developerpeachy" target="_blank" className="font-bold no-underline hover:underline text-white hover:text-yellow-500">
-                        developerpeachy
-                        </a>
-                    </p>
-                </div> 
-            </div>
-        </div>
-    </footer>
-    );
+import styled from "styled-components";
+
+const Container = styled.div`
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
+
+const ByLine = styled.p`
+  padding: 1rem;
+  font-family: "FiraSans";
+  font-weight: 500;
+  list-style-type: none;
+
+  a {
+    color: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
   }
-  
-  export default Footer;
+`;
+
+const Footer = ({}) => {
+  return (
+    <Container>
+      <ByLine>
+        <a
+          href="https://github.com/developerpeachy"
+          target="_blank"
+          className="font-bold no-underline hover:underline text-white hover:text-yellow-500"
+        >
+          built by developerpeachy
+        </a>
+      </ByLine>
+    </Container>
+  );
+};
+
+export default Footer;

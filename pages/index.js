@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Header from "../components/header";
+import Footer from "../components/footer";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -8,7 +9,7 @@ const Container = styled.div`
   padding: 2rem;
   margin-top: 5rem;
 
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     padding: 1rem;
   }
 `;
@@ -84,6 +85,7 @@ const Home = ({}) => {
           being active, going to the gym regularly and eating healthy!
         </AboutText>
       </Container>
+      <Footer />
     </Layout>
   );
 };

@@ -1,5 +1,6 @@
 import Layout from "../components/layout";
 import Header from "../components/header";
+import Footer from "../components/footer";
 import Cards from "../components/cards";
 import styled from "styled-components";
 
@@ -9,7 +10,7 @@ const Container = styled.div`
   padding: 2rem;
   margin-top: 5rem;
 
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     padding: 0.5rem;
   }
 `;
@@ -32,8 +33,8 @@ const Projects = ({}) => {
     <Layout>
       <Header />
       <Container>
-        <Title>Projects and Work.</Title>
-        <ShortText>Some of the project I've worked on in the past.</ShortText>
+        <Title>Projects</Title>
+        <ShortText>Some of the projects I've worked on in the past.</ShortText>
         <Cards
           items={[
             {
@@ -63,11 +64,14 @@ const Projects = ({}) => {
               shortDescription:
                 "Did a DataVis project to demonstrate how Ethereum mining works in Blockchain on a low-level. I used Unity C#, EPICentre UNSW and VR Equipment.",
               linkName: "Ethviewer",
-              url: "http://ethviewer.live/"
+              url: "http://ethviewer.live/",
+              linkNameTwo: "Epicenter",
+              urlTwo: "http://epicentre.matters.today/"
             }
           ]}
         />
       </Container>
+      <Footer />
     </Layout>
   );
 };
