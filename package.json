@@ -22,6 +22,7 @@
     "next-seo": "^4.4.0",
     "prismic-cli": "^3.7.0",
     "prismic-javascript": "^2.7.0",
+    "prismic-reactjs": "^1.3.0",
     "ramda": "^0.27.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",

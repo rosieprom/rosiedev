@@ -34,17 +34,17 @@ const Volunteering = ({}) => {
       <Container>
         <Title>Volunteering</Title>
         <ShortText>
-          I'm extremely passionate about serving the community in Sydney.
+          I'm extremely passionate about serving the community in Sydney. Here
+          are some of the highlights of my volunteering career.
         </ShortText>
         <Cards
           items={[
             {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+              src: "/LiftOffDiversity.png",
               alt: "YBF Student Leader of the Year",
               title: "YBF Ventures Student Leader of the Year 2019.",
               shortDescription:
-                "I was nominated and won Student Leader of the Year as a part of YBF Ventures' Lift Off Awards.",
+                "I was nominated and won Student Leader of the Year as a part of YBF Ventures' Lift Off Awards. You can read more about the YBF Ventures lift off awards in the medium article below.",
               linkName: "Medium",
               url:
                 "https://medium.com/@ybfventures.ad/winners-announced-for-australias-second-annual-fintech-diversity-awards-the-2019-lift-off-awards-42abe8e4c0bd",
@@ -54,23 +54,21 @@ const Volunteering = ({}) => {
             },
 
             {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+              src: "/SIGGRAPHAsiaSV.jpg",
               alt: "SIGGRAPH Asia Student Volunteer",
               title: "SIGGRAPH Asia SV 2019",
               shortDescription:
-                "SIGGRAPH is the biggest Computer Animation and Interactive Techniques Conference in the world and it FINALLY came to Australia!",
+                "SIGGRAPH is the biggest Computer Animation and Interactive Techniques Conference in the world and it FINALLY came to Australia! I was very lucky to be one of many Aussies volunteering at this SIGGRAPH conference. ",
               linkName: "LinkedIn",
               url:
                 "https://www.linkedin.com/embed/feed/update/urn:li:share:6602996100746092545"
             },
             {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+              src: "/UTSPilotSTEM.png",
               alt: "UTS WiEIT STEM",
               title: "UTS Pilot STEM Primary Program",
               shortDescription:
-                "As a part of the UTS Outreach program, I volunteered and mentored STEM to some primary school students",
+                "As a part of the UTS Outreach program, I volunteered to teach STEM to some primary school students. This program was pretty successful in inspiring and stimulating young students to get interested in pursuing Science or Engineering in the future. I am very fortunate to be a part of the program. As an engineer today, I felt like my soft skills (presenting and teaching) has been enhanced by being a part of WiEIT's multiple outreach programs. Read more and watch the video below to learn more about UTS's mission to diversify the tech industry.",
               linkName: "Video",
               url:
                 "https://www.uts.edu.au/about/faculty-engineering-and-information-technology/women-engineering-and-it/primary-and-high-0-0",

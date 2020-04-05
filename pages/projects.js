@@ -37,8 +37,7 @@ const Projects = ({}) => {
         <Cards
           items={[
             {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+              src: "/trianglesoflight.jpg",
               alt: "Triangle of Lights",
               title: "Triangle of Lights",
               shortDescription:
@@ -49,8 +48,7 @@ const Projects = ({}) => {
               urlTwo: "https://www.instagram.com/p/Bz0WP_Og_A9/"
             },
             {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+              src: "/alphawallet_website.png",
               alt: "AlphaWallet.com",
               title: "AlphaWallet",
               shortDescription:
@@ -59,28 +57,7 @@ const Projects = ({}) => {
               url: "https://alphawallet.com/"
             },
             {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
-              alt: "ProgSocUTS",
-              title: "ProgSoc UTS Netlify Site",
-              shortDescription:
-                "As a part of the UTS Programmers' Society, I volunteered some time to reconstruct a home page as part of an ongoing community project.",
-              linkName: "Website",
-              url: "https://progsoc.netlify.com/"
-            },
-            {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
-              alt: "Portfolio Piece",
-              title: "Final Portfolio - Interactive Design",
-              shortDescription:
-                "I graduated from UTS and compiled the best work I could in this PDF Presentation. Download and take a look!",
-              linkName: "Presentation",
-              url: "/static/Rosie_Design_Portfolio.pdf"
-            },
-            {
-              src:
-                "https://images.unsplash.com/photo-1585907122964-65ad93c5c566?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+              src: "/ethviewer.JPG",
               alt: "ETHViewer XR",
               title: "ETHViewer - Interactive Design",
               shortDescription:

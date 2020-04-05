@@ -16,7 +16,7 @@ const Card = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  flex: 1;
+  flex: 1.5;
 `;
 
 const Img = styled.img`
@@ -27,7 +27,6 @@ const Img = styled.img`
 const Content = styled.div`
   flex: 2;
   padding: 2rem;
-  border: 1px solid #000;
 
   @media (max-width: 700px) {
     padding: 1rem;
