@@ -116,6 +116,11 @@ function Header() {
 
   return (
     <HeaderContainer>
+      <title> Rosalie Prom</title>
+      <meta
+        name="description"
+        content="Rosalie Prom | Software Developer | Front end developer"
+      />
       <MenuIcon open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />

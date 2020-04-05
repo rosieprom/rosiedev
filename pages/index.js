@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  margin-top: 5rem;
+  margin: 5rem 0;
 
   @media (min-width: 700px) {
     padding: 1rem;
@@ -85,7 +85,6 @@ const Home = ({}) => {
           being active, going to the gym regularly and eating healthy!
         </AboutText>
       </Container>
-      <Footer />
     </Layout>
   );
 };
