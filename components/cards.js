@@ -1,48 +1,139 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const Card = styled.div`
-  background: #FFFFF;
   padding: 1rem;
+  margin: 2rem;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 5px;
   box-sizing: border-box;
+  display: flex;
+
+  @media (max-width: 700px) {
+    display: block;
+  }
 `;
 
-export default Card;
-// function Cards(props) {
-//   return (
-//       {props.items.map((item, index) => (
-//         <div class="p-4">
-//           <div class="max-w-sm rounded overflow-hidden shadow-lg" key={index}>
-//             <img class="w-full" src={item.src} alt={item.alt} />
-//             <div class="px-6 py-4">
-//               <div class="font-bold text-xl mb-2 font-sans">{item.title}</div>
-//               <p class="text-gray-700 text-base font-sans">
-//                 {item.shortDescription}
-//               </p>
-//             </div>
-//             <div class="flex px-6 py-4">
-//               {item.url ? (
-//                 <a href={item.url} target="_blank" rel="noopener noreferrer">
-//                   <button class="bg-black hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full inline-flex font-sans items-center">
-//                     <span>{item.linkName}</span>
-//                   </button>
-//                 </a>
-//               ) : null}
+const ImgContainer = styled.div`
+  flex: 1;
+`;
 
-//               {item.urlTwo ? (
-//                 <a href={item.urlTwo} target="_blank" rel="noopener noreferrer">
-//                   <button class="bg-black hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full inline-flex font-sans items-center mx-4">
-//                     <span>{item.linkNameTwo}</span>
-//                   </button>
-//                 </a>
-//               ) : null}
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-//   );
-// }
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
-// export default Cards;
+const Content = styled.div`
+  flex: 2;
+  padding: 2rem;
+  border: 1px solid #000;
+
+  @media (max-width: 700px) {
+    padding: 1rem;
+  }
+`;
+
+const Title = styled.h1`
+  text-align: left;
+  font-family: "Montserrat-Bold";
+  padding-left: 2rem;
+
+  @media (max-width: 700px) {
+    padding: 0rem;
+  }
+`;
+
+const ShortDescription = styled.h4`
+  text-align: left;
+  font-family: "Montserrat";
+  padding-left: 2rem;
+
+  @media (max-width: 700px) {
+    padding: 0rem;
+  }
+`;
+
+const CardFooter = styled.div`
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end;
+`;
+
+const CustomButton = styled.button`
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: inline-flex;
+  text-align: center;
+  margin: 0.5rem;
+
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+`;
+
+const BlankLink = styled.a`
+  text-decoration: none;
+`;
+
+const Text = styled.span`
+  font: 1.2em "Fira Sans", sans-serif;
+`;
+
+function Cards(props) {
+  return (
+    <>
+      {props.items.map((item, index) => (
+        <Card key={index}>
+          <ImgContainer>
+            <Img src={item.src} alt={item.alt} />
+          </ImgContainer>
+
+          <Content>
+            <Title>{item.title}</Title>
+            <ShortDescription>{item.shortDescription}</ShortDescription>
+            <CardFooter>
+              {item.url ? (
+                <BlankLink
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CustomButton
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Text>{item.linkName}</Text>
+                  </CustomButton>
+                </BlankLink>
+              ) : null}
+
+              {item.urlTwo ? (
+                <BlankLink
+                  href={item.urlTwo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CustomButton
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Text>{item.linkNameTwo}</Text>
+                  </CustomButton>
+                </BlankLink>
+              ) : null}
+            </CardFooter>
+          </Content>
+        </Card>
+      ))}
+    </>
+  );
+}
+
+export default Cards;
