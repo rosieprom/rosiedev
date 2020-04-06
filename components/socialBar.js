@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const StyledIcon = styled.svg`
-  fill: #000;
+  fill: ${props => props.theme.text.primary};
   opacity: 0.6;
   transition: 0.3s;
   &:hover {

@@ -31,7 +31,7 @@ const MenuIcon = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ open }) => (open ? "#000" : "#000")};
+    background: ${props => props.theme.text.primary};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -60,7 +60,7 @@ const Links = styled.div`
 
   @media (max-width: 700px) {
     display: flex;
-    background: #fff;
+    background: ${props => props.theme.bg.secondary};
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
@@ -82,7 +82,7 @@ const PageLink = styled.li`
   list-style-type: none;
 
   a {
-    color: #000;
+    color: ${props => props.theme.text.primary};
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -100,14 +100,14 @@ const PageLink = styled.li`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #000;
+    background: ${props => props.theme.text.primary};
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
   a:hover:after {
     width: 100%;
     left: 0;
-    color: #000;
+    color: ${props => props.theme.text.primary};
   }
 `;
 

@@ -60,9 +60,9 @@ const CardFooter = styled.div`
 `;
 
 const CustomButton = styled.button`
-  background-color: #fff;
-  border: 1px solid #000;
-  color: #000;
+  background-color: ${props => props.theme.bg.secondary};
+  border: 1px solid ${props => props.theme.text.primary};
+  color: ${props => props.theme.text.primary};
   padding: 0.5rem 1rem;
   border-radius: 10px;
   display: inline-flex;
@@ -70,8 +70,8 @@ const CustomButton = styled.button`
   margin: 0.5rem;
 
   &:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: ${props => props.theme.text.primary};
+    color: ${props => props.theme.bg.secondary};
   }
 `;
 

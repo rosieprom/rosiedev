@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-const Layout = styled.div`
-  margin: 0 auto;
+const Button = styled.button`
   background: ${props => props.theme.bg.secondary};
   color: ${props => props.theme.text.primary};
 `;
 
-Layout.defaultProps = {
+Button.defaultProps = {
   theme: {
     bg: {
       primary: "#eff0f5",
@@ -25,4 +24,4 @@ Layout.defaultProps = {
   }
 };
 
-export default Layout;
+export default Button;
