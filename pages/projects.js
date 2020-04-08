@@ -1,4 +1,5 @@
 import Layout from "../components/layout";
+import Header from "../components/header";
 import Footer from "../components/footer";
 import Cards from "../components/cards";
 import styled from "styled-components";
@@ -9,7 +10,7 @@ const Container = styled.div`
   padding: 2rem;
   margin-top: 5rem;
 
-  @media (min-width: 700px) {
+  @media (max-width: 800px) {
     padding: 0.5rem;
   }
 `;
@@ -30,6 +31,7 @@ const ShortText = styled.h3`
 const Projects = ({}) => {
   return (
     <Layout>
+      <Header />
       <Container>
         <Title>Projects</Title>
         <ShortText>Some of the projects I've worked on in the past.</ShortText>
