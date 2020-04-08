@@ -10,7 +10,7 @@ const Container = styled.div`
   padding: 2rem;
   margin-top: 5rem;
 
-  @media (min-width: 800px) {
+  @media (max-width: 800px) {
     padding: 0.5rem;
   }
 `;
