@@ -1,13 +1,16 @@
 import Link from "next/link";
-import { useState } from "react";
 import styled from "styled-components";
+import useDarkMode from "use-dark-mode";
+import React, { useState, useEffect } from "react";
+import Toggle from "./toggle";
+import { lightTheme, darkTheme } from "../theme";
 
 const HeaderContainer = styled.div`
   display: flex;
 `;
 
 const MenuIcon = styled.button`
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     display: none;
   }
   position: absolute;
@@ -31,7 +34,7 @@ const MenuIcon = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${props => props.theme.text.primary};
+    background: ${props => props.theme.text.secondary};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -56,17 +59,17 @@ const Links = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     display: flex;
-    background: ${props => props.theme.bg.secondary};
+    background: ${props => props.theme.bg.primary};
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
     height: 100vh;
     text-align: left;
-    padding: 2rem;
+    padding: 1rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -111,12 +114,40 @@ const PageLink = styled.li`
   }
 `;
 
+const LightDarkSwitch = styled.button`
+  background-color: ${props => props.theme.bg.primary};
+  border: 1px solid ${props => props.theme.text.primary};
+  color: ${props => props.theme.text.primary};
+  border-radius: 10px;
+  display: inline-flex;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+
+  &:hover {
+    background-color: ${props => props.theme.text.primary};
+    color: ${props => props.theme.bg.secondary};
+  }
+`;
+
 function Header() {
+  const [isMounted, setIsMounted] = useState(false);
+  const darkMode = useDarkMode(true);
+  const theme = darkMode.value ? darkTheme : lightTheme;
   const [open, setOpen] = React.useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <HeaderContainer>
-      <title> Rosalie Prom</title>
+      <title>Rosalie Prom ☾</title>
       <meta
         name="description"
         content="Rosalie Prom | Software Developer | Front end developer"
@@ -138,6 +169,18 @@ function Header() {
             </Link>
           </PageLink>
         ))}
+
+        <div>
+          {theme === darkTheme && (
+            <LightDarkSwitch onClick={darkMode.disable}>
+              ☀ LIGHT
+            </LightDarkSwitch>
+          )}
+          <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
+          {theme === lightTheme && (
+            <LightDarkSwitch onClick={darkMode.enable}>☾ DARK</LightDarkSwitch>
+          )}
+        </div>
       </Links>
     </HeaderContainer>
   );

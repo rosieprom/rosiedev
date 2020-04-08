@@ -9,7 +9,7 @@ const Card = styled.div`
   box-sizing: border-box;
   display: flex;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     display: block;
     margin: 0;
   }
@@ -28,7 +28,7 @@ const Content = styled.div`
   flex: 2;
   padding: 2rem;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     padding: 1rem;
   }
 `;
@@ -38,7 +38,7 @@ const Title = styled.h1`
   font-family: "Montserrat-Bold";
   padding-left: 2rem;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     padding: 0rem;
   }
 `;
@@ -48,7 +48,7 @@ const ShortDescription = styled.h4`
   font-family: "Montserrat";
   padding-left: 2rem;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     padding: 0rem;
   }
 `;
@@ -60,7 +60,7 @@ const CardFooter = styled.div`
 `;
 
 const CustomButton = styled.button`
-  background-color: ${props => props.theme.bg.secondary};
+  background-color: ${props => props.theme.bg.primary};
   border: 1px solid ${props => props.theme.text.primary};
   color: ${props => props.theme.text.primary};
   padding: 0.5rem 1rem;

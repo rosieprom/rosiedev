@@ -7,14 +7,7 @@ const ToggleControl = styled.span`
 
 const Toggle = ({ checked, onChange }) => (
   <ToggleControl>
-    <input
-      className="dmcheck"
-      type="checkbox"
-      checked={checked}
-      onChange={onChange}
-      id="dmcheck"
-    />
-    <label htmlFor="dmcheck" />
+    <input type="checkbox" checked={checked} onChange={onChange} />
   </ToggleControl>
 );
 
