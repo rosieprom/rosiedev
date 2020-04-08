@@ -80,9 +80,10 @@ const Home = ({}) => {
           I aspire to become a Full Stack Developer or a Solutions Architect or
           a Blockchain enthusiast of some kind. I'm passionate about current
           trends in technology, community and education. I volunteer some of my
-          spare time helping local communities thrive. I'm also a gamer. I enjoy
-          being active, going to the gym regularly and eating healthy!
+          spare time helping local communities thrive. In my spare time I like
+          gaming and weightlifting!
         </AboutText>
+        <AboutText>I'm currently not available for freelance work.</AboutText>
       </Container>
     </Layout>
   );
