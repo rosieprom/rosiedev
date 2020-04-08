@@ -57,6 +57,10 @@ const CardFooter = styled.div`
   display: flex;
   padding: 1rem;
   justify-content: flex-end;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 const CustomButton = styled.button`
