@@ -34,7 +34,7 @@ const MenuIcon = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${props => props.theme.text.secondary};
+    background: ${(props) => props.theme.text.secondary};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
@@ -63,7 +63,7 @@ const Links = styled.div`
 
   @media (max-width: 800px) {
     display: flex;
-    background: ${props => props.theme.bg.primary};
+    background: ${(props) => props.theme.bg.primary};
     flex-direction: column;
     justify-content: center;
     padding: 1rem;
@@ -78,14 +78,14 @@ const Links = styled.div`
   }
 `;
 
-const PageLink = styled.li`
+const PageLink = styled.p`
   padding: 2rem;
   font-family: "FiraSans";
   font-weight: 500;
   list-style-type: none;
 
   a {
-    color: ${props => props.theme.text.primary};
+    color: ${(props) => props.theme.text.primary};
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -103,21 +103,21 @@ const PageLink = styled.li`
     height: 2px;
     left: 50%;
     position: absolute;
-    background: ${props => props.theme.text.primary};
+    background: ${(props) => props.theme.text.primary};
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
   a:hover:after {
     width: 100%;
     left: 0;
-    color: ${props => props.theme.text.primary};
+    color: ${(props) => props.theme.text.primary};
   }
 `;
 
 const LightDarkSwitch = styled.button`
-  background-color: ${props => props.theme.bg.primary};
-  border: 1px solid ${props => props.theme.text.primary};
-  color: ${props => props.theme.text.primary};
+  background-color: ${(props) => props.theme.bg.primary};
+  border: 1px solid ${(props) => props.theme.text.primary};
+  color: ${(props) => props.theme.text.primary};
   border-radius: 10px;
   display: inline-flex;
   text-align: center;
@@ -130,8 +130,8 @@ const LightDarkSwitch = styled.button`
   position: relative;
 
   &:hover {
-    background-color: ${props => props.theme.text.primary};
-    color: ${props => props.theme.bg.secondary};
+    background-color: ${(props) => props.theme.text.primary};
+    color: ${(props) => props.theme.bg.secondary};
   }
 `;
 
@@ -148,10 +148,6 @@ function Header() {
   return (
     <HeaderContainer>
       <title>Rosalie Prom ☾</title>
-      <meta
-        name="description"
-        content="Rosalie Prom | Software Developer | Front end developer"
-      />
       <MenuIcon open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
@@ -161,8 +157,8 @@ function Header() {
         {[
           { title: "Rosalie Prom", route: "/" },
           { title: "Projects", route: "/projects" },
-          { title: "Volunteering", route: "/volunteering" }
-        ].map(navigationItem => (
+          { title: "Volunteering", route: "/volunteering" },
+        ].map((navigationItem) => (
           <PageLink key={navigationItem.title}>
             <Link href={navigationItem.route}>
               <a>{navigationItem.title}</a>
