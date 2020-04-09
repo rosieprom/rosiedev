@@ -12,7 +12,10 @@ class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charset="utf-8" />
-          <link rel="icon" type="image/png" href="/favicon.ico" />
+          <link
+            rel="icon"
+            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/sun-with-face_1f31e.png"
+          />
           <link rel="apple-touch-icon" href="/favicon.ico" />
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
