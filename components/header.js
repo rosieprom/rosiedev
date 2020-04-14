@@ -158,6 +158,7 @@ function Header() {
           { title: "Rosalie Prom", route: "/" },
           { title: "Projects", route: "/projects" },
           { title: "Volunteering", route: "/volunteering" },
+          { title: "Blog", route: "/blog" },
         ].map((navigationItem) => (
           <PageLink key={navigationItem.title}>
             <Link href={navigationItem.route}>
