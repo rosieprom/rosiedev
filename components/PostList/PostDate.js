@@ -2,18 +2,10 @@ import React from "react";
 import { Date } from "prismic-reactjs";
 import styled from "styled-components";
 
-const BlogPostMeta = styled.p`
-  color: #9a9a9a;
-  font-family: "Lato", sans-serif;
-  margin-bottom: 8px;
-
-  @media (max-width: 767px) {
-    font-size: 16px;
-  }
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-  }
+const BlogPostTime = styled.p`
+  color: ${(props) => props.theme.text.primary};
+  font-family: "FiraSans";
+  font-weight: 500;
 `;
 /**
  * Post list item date component
@@ -29,11 +21,7 @@ const PostDate = ({ date }) => {
     Date(date)
   );
 
-  return (
-    <BlogPostMeta>
-      <time className="created-at">{displayDate}</time>
-    </BlogPostMeta>
-  );
+  return <BlogPostTime>{displayDate}</BlogPostTime>;
 };
 
 export default PostDate;

@@ -3,7 +3,9 @@ import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import styled from "styled-components";
+import SliceZone from "../../components/SliceZone";
 import { Client } from "../../utils/prismicHelpers";
+import Link from "next/link";
 
 const Title = styled.h1`
   text-align: left;
@@ -22,17 +24,56 @@ const Container = styled.div`
   }
 `;
 
+const BackLink = styled.p`
+  padding: 2rem;
+  font-family: "FiraSans";
+  font-weight: 500;
+  list-style-type: none;
+
+  a {
+    color: ${(props) => props.theme.text.primary};
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: ${(props) => props.theme.text.primary};
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after {
+    width: 100%;
+    left: 0;
+    color: ${(props) => props.theme.text.primary};
+  }
+`;
+
 const Post = ({ post }) => {
   if (post) {
-    const titled = RichText.asText(post.data.blogtitle).length !== 0;
-    const title = titled ? RichText.asText(post.data.blogtitle) : "Untitled";
+    const titled = RichText.asText(post.data.title).length !== 0;
+    const title = titled ? RichText.asText(post.data.title) : "Untitled";
 
     return (
       <Layout>
         <Header />
         <Container>
+          <Link href="/blog" as="/blog">
+            <BackLink> ← back to blogs</BackLink>
+          </Link>
           <Title>{title}</Title>
-          <p>{post.data.text}</p>
+          <SliceZone sliceZone={post.data.body1} />
         </Container>
         <Footer />
       </Layout>
@@ -50,7 +91,7 @@ Post.getInitialProps = async function ({ req, query }) {
   try {
     const { uid } = query;
     const document = await Client(req).getByUID("blog", uid);
-
+    //console.log(JSON.stringify(document));
     return {
       post: document,
     };
