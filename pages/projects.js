@@ -1,7 +1,7 @@
-import Layout from "../components/layout";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import Cards from "../components/cards";
+import Layout from "../components/Layout";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Cards from "../components/Cards";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -46,7 +46,7 @@ const Projects = ({}) => {
               linkName: "Github",
               url: "https://github.com/developerpeachy/TrianglesOfLight",
               linkNameTwo: "Instagram",
-              urlTwo: "https://www.instagram.com/p/Bz0WP_Og_A9/"
+              urlTwo: "https://www.instagram.com/p/Bz0WP_Og_A9/",
             },
             {
               src: "/alphawallet_website.png",
@@ -55,7 +55,7 @@ const Projects = ({}) => {
               shortDescription:
                 "AlphaWallet's website was made with React, TailwindCSS and hosted off Github and Netlify.",
               linkName: "Website",
-              url: "https://alphawallet.com/"
+              url: "https://alphawallet.com/",
             },
             {
               src: "/ethviewer.JPG",
@@ -66,8 +66,8 @@ const Projects = ({}) => {
               linkName: "Ethviewer",
               url: "http://ethviewer.live/",
               linkNameTwo: "Epicenter",
-              urlTwo: "http://epicentre.matters.today/"
-            }
+              urlTwo: "http://epicentre.matters.today/",
+            },
           ]}
         />
       </Container>

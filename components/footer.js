@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SocialBar from "../components/socialBar";
+import SocialBar from "./socialBar";
 
 const Container = styled.div`
   display: block;

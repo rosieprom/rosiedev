@@ -1,41 +1,58 @@
 import Prismic from "prismic-javascript";
-import { RichText } from "prismic-reactjs";
 
 // Project components & functions
 import Header from "../../components/Header";
-import Footer from "../../components/footer";
+import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";
+import PostList from "../../components/PostList";
 import { Client } from "../../utils/prismicHelpers";
+import SetupRepo from "../../components/SetupRepo";
+import styled from "styled-components";
 
-/**
- * Homepage component
- */
-const Home = ({ doc, posts }) => {
+const Title = styled.h1`
+  text-align: left;
+  font-family: "Montserrat-Bold";
+  padding-left: 2rem;
+`;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 5rem;
+
+  @media (max-width: 800px) {
+    padding: 0.5rem;
+  }
+`;
+
+const Blog = ({ doc, posts }) => {
   if (doc) {
     return (
       <Layout>
         <Header />
-        <p> {posts} </p>
+        <Container>
+          <Title>Blogs</Title>
+          <PostList posts={posts} />
+        </Container>
         <Footer />
       </Layout>
     );
   }
+  return <SetupRepo />;
 };
 
 /**
  * Query the homepage document and blog posts from Prismic when the page is loaded
  */
-Home.getInitialProps = async function ({ req }) {
+Blog.getInitialProps = async function ({ req }) {
   try {
-    // Retrieve the homepage document
     const doc = await Client(req).getSingle("blog");
 
-    // Retrieve the blog posts organized in descending chronological order
     const posts = await Client(req).query(
-      Prismic.Predicates.at("document.type", "post"),
-      { orderings: "[my.post.date desc]" }
+      Prismic.Predicates.at("document.type", "blog"),
+      { orderings: "[my.blog.date desc]" }
     );
-
     return {
       doc,
       posts: posts ? posts.results : [],
@@ -46,4 +63,4 @@ Home.getInitialProps = async function ({ req }) {
   }
 };
 
-export default Home;
+export default Blog;

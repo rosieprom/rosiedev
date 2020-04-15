@@ -1,5 +1,5 @@
-import Layout from "../components/layout";
-import Header from "../components/header";
+import Layout from "../components/Layout";
+import Header from "../components/Header";
 import styled from "styled-components";
 
 const Container = styled.div`
