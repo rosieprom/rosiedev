@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "rosalie-dev",
+  "name": "rosaliedev",
   "builds": [
     {
       "src": "next.config.js",
