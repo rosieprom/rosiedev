@@ -29,34 +29,28 @@ const BackLink = styled.p`
   font-family: "FiraSans";
   font-weight: 500;
   list-style-type: none;
+  cursor: pointer;
 
   a {
     color: ${(props) => props.theme.text.primary};
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
+    cursor: pointer;
 
     display: inline-block;
-    padding: 15px 20px;
     position: relative;
   }
 
   a:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: ${(props) => props.theme.text.primary};
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
+    color: ${(props) => props.theme.text.secondary};
+    cursor: pointer;
+    text-decoration: underline;
   }
-  a:hover:after {
-    width: 100%;
-    left: 0;
+  a:hover {
     color: ${(props) => props.theme.text.primary};
+    cursor: pointer;
+    text-decoration: underline;
   }
 `;
 
@@ -70,7 +64,9 @@ const Post = ({ post }) => {
         <Header />
         <Container>
           <Link href="/blog" as="/blog">
-            <BackLink> ← back to blogs</BackLink>
+            <BackLink>
+              <a>← back to blogs</a>
+            </BackLink>
           </Link>
           <Title>{title}</Title>
           <SliceZone sliceZone={post.data.body1} />

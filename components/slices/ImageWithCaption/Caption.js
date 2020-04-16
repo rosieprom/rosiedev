@@ -1,21 +1,19 @@
-import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import React from "react";
+import { RichText } from "prismic-reactjs";
+import styled from "styled-components";
 
-/**
- * Image caption component
- */
+const ImageLabel = styled.p`
+  font-style: italic;
+  font-size: 1rem;
+  font-family: "FiraSans";
+`;
+
 const Caption = ({ caption }) => {
-  if (RichText.asText(caption) !== '') {
-    return (
-      <p>
-        <span className='image-label'>
-          {RichText.asText(caption)}
-        </span>
-      </p>
-    )
+  if (RichText.asText(caption) !== "") {
+    return <ImageLabel>{RichText.asText(caption)}</ImageLabel>;
   }
 
-  return null
-}
+  return null;
+};
 
-export default Caption
+export default Caption;

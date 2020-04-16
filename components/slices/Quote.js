@@ -3,51 +3,79 @@ import { RichText } from "prismic-reactjs";
 import styled from "styled-components";
 
 const BlockQuotation = styled.div`
-  margin-bottom: 2rem;
+  margin: 2rem;
   display: inline-block;
   font-style: italic;
-  font-size: 24px;
+  font-size: 1rem;
   font-family: "FiraSans";
 
-  &:before {
-    content: "« ";
-  }
-
-  &:after {
-    content: " »";
+  @media (max-width: 800px) {
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0;
   }
 `;
 
-const PostPartSingle = styled.div`
-  @media screen and (min-width: 920px) {
-    .post-part.single .block-quotation,
-    .blog-main.single .block-quotation {
-      width: 130%;
-      margin: 0 -15% 2rem -15%;
-      font-size: 30px;
-      padding: 0;
-    }
+const Container = styled.div`
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 `;
 
 const BlockCitation = styled.p`
-  display: inline-block;
+  display: flex;
+  text-align: right;
   font-style: italic;
-  font-family: "FiraSans";
-  border-left: solid #b4b4b4 4px;
-  padding-left: 10px;
+  font-family: "Montserrat";
+
+  @media (max-width: 800px) {
+    display: block;
+    text-align: center;
+  }
+`;
+
+const CustomDiv = styled.div`
+  text-align: center;
+  display: inline-block;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+`;
+
+const ImageContainer = styled.img`
+  border-radius: 50%;
+  height: 10rem;
 `;
 
 /**
  * Quote slice component
  */
 const Quote = ({ slice }) => (
-  <PostPartSingle>
-    <BlockQuotation>{RichText.asText(slice.primary.quote)}</BlockQuotation>
-    <BlockCitation>
-      {RichText.asText(slice.primary.name_of_the_author)}
-    </BlockCitation>
-  </PostPartSingle>
+  <Container>
+    <CustomDiv>
+      <ImageContainer
+        src={slice.primary.portrait_author.url}
+        alt={slice.primary.portrait_author.alt}
+      />
+    </CustomDiv>
+
+    <BlockQuotation>
+      {RichText.asText(slice.primary.quote)}
+      <BlockCitation>
+        {RichText.asText(slice.primary.name_of_the_author)}
+      </BlockCitation>
+    </BlockQuotation>
+  </Container>
 );
 
 export default Quote;

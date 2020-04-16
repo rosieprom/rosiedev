@@ -20,16 +20,21 @@ const BlogTitle = styled.h2`
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
+    cursor: pointer;
 
     display: inline-block;
     position: relative;
   }
 
   a:after {
-    background: ${(props) => props.theme.text.primary};
+    color: ${(props) => props.theme.text.secondary};
+    cursor: pointer;
+    text-decoration: underline;
   }
-  a:hover:after {
+  a:hover {
     color: ${(props) => props.theme.text.primary};
+    cursor: pointer;
+    text-decoration: underline;
   }
 `;
 

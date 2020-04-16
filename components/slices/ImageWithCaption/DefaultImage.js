@@ -1,22 +1,34 @@
-import React from 'react'
-import Caption from './Caption'
+import React from "react";
+import Caption from "./Caption";
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: block;
+  margin: 0;
+  padding: 0;
+`;
+
+const ImageContainer = styled.img`
+  display: inline-block;
+  width: 90%;
+  height: 20%;
+  margin: 2rem;
+`;
 
 /**
  * Default image component
  */
 const DefaultImage = ({ slice }) => {
-  const imageUrl = slice.primary.image.url
-  const imageAlt = slice.primary.image.alt
-  const caption = slice.primary.caption
+  const imageUrl = slice.primary.image_banner.url;
+  const imageAlt = slice.primary.image_banner.alt;
+  // const caption = slice.primary.caption;
 
   return (
-    <div className="post-part single container">
-      <div className={`block-img ${slice.slice_label}`}>
-        <img src={imageUrl} alt={imageAlt} />
-        <Caption caption={caption} />
-      </div>
-    </div>
-  )
-}
+    <Container>
+      <ImageContainer src={imageUrl} alt={imageAlt} />
+      {/* <Caption caption={caption} /> */}
+    </Container>
+  );
+};
 
-export default DefaultImage
+export default DefaultImage;

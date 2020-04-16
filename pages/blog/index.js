@@ -1,6 +1,4 @@
 import Prismic from "prismic-javascript";
-
-// Project components & functions
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Layout from "../../components/Layout";

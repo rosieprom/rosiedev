@@ -11,16 +11,14 @@ const Container = styled.div`
 const ShortDescription = styled.p`
   text-align: left;
   font-family: "FiraSans";
-  padding-left: 2rem;
+  margin: 1rem 5rem;
 
   @media (max-width: 800px) {
     padding: 0rem;
+    margin: 0.5rem;
   }
 `;
 
-/**
- * Text slice component
- */
 const Text = ({ slice }) => (
   <Container>
     <ShortDescription>

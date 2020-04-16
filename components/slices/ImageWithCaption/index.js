@@ -8,7 +8,7 @@ import styled from "styled-components";
  */
 const ImageCaption = ({ slice }) => {
   const imageComponent =
-    slice.slice_label === "image-full-width" ? (
+    slice.slice_label === "image_banner" ? (
       <FullWidthImage slice={slice} />
     ) : (
       <DefaultImage slice={slice} />

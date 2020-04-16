@@ -1,23 +1,26 @@
-import React from 'react'
-import Caption from './Caption'
+import React from "react";
+import Caption from "./Caption";
+import styled from "styled-components";
+
+const LargeContainer = styled.div`
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+`;
 
 /**
  * Full width image component
  */
 const FullWidthImage = ({ slice }) => {
-  const imageUrl = slice.primary.image.url
-  const caption = slice.primary.caption
+  const imageUrl = slice.primary.image.url;
+  const caption = slice.primary.caption;
 
   return (
-    <div
-      className="blog-header single"
-      style={{ backgroundImage: `url(${imageUrl})` }}
-    >
-      <div className="wrapper">
-        <Caption caption={caption} />
-      </div>
-    </div>
-  )
-}
+    <LargeContainer style={{ backgroundImage: `url(${imageUrl})` }}>
+      <Caption caption={caption} />
+    </LargeContainer>
+  );
+};
 
-export default FullWidthImage
+export default FullWidthImage;
