@@ -3,17 +3,17 @@ import Prismic from "prismic-javascript";
 export const apiEndpoint = "https://rosaliedev.cdn.prismic.io/api/v2";
 export const accessToken = "";
 
-// Client method to query documents from the Prismic repo
-export const Client = (req = null) =>
-  Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
+export const linkResolver = (post) => {
+  if (post.type === "blog") {
+    return `/blog/${post.uid}`;
+  }
+  return "/";
+};
 
-const createClientOptions = (req = null, prismicAccessToken = null) => {
-  const reqOption = req ? { req } : {};
-  const accessTokenOption = prismicAccessToken
-    ? { accessToken: prismicAccessToken }
-    : {};
-  return {
-    ...reqOption,
-    ...accessTokenOption
-  };
+// Additional helper function for Next/Link components
+export const hrefResolver = (post) => {
+  if (post.type === "blog") {
+    return "/blog/[uid]";
+  }
+  return "/";
 };

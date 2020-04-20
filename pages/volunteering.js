@@ -51,7 +51,7 @@ const Volunteering = ({}) => {
                 "https://medium.com/@ybfventures.ad/winners-announced-for-australias-second-annual-fintech-diversity-awards-the-2019-lift-off-awards-42abe8e4c0bd",
               linkNameTwo: "LinkedIn",
               urlTwo:
-                "https://www.linkedin.com/embed/feed/update/urn:li:share:6605002335485853696"
+                "https://www.linkedin.com/embed/feed/update/urn:li:share:6605002335485853696",
             },
 
             {
@@ -62,7 +62,7 @@ const Volunteering = ({}) => {
                 "SIGGRAPH is the biggest Computer Animation and Interactive Techniques Conference in the world and it FINALLY came to Australia! I was very lucky to be one of many Aussies volunteering at this SIGGRAPH conference. ",
               linkName: "LinkedIn",
               url:
-                "https://www.linkedin.com/embed/feed/update/urn:li:share:6602996100746092545"
+                "https://www.linkedin.com/embed/feed/update/urn:li:share:6602996100746092545",
             },
             {
               src: "/UTSPilotSTEM.png",
@@ -75,8 +75,8 @@ const Volunteering = ({}) => {
                 "https://www.uts.edu.au/about/faculty-engineering-and-information-technology/women-engineering-and-it/primary-and-high-0-0",
               linkNameTwo: "Article",
               urlTwo:
-                "https://www.uts.edu.au/partners-and-community/initiatives/social-justice-uts/social-impact-grants/news/building-stem"
-            }
+                "https://www.uts.edu.au/partners-and-community/initiatives/social-justice-uts/social-impact-grants/news/building-stem",
+            },
           ]}
         />
       </Container>

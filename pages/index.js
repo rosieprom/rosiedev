@@ -17,6 +17,7 @@ const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
   padding-left: 2rem;
+  font-size: 2rem;
 
   @media (max-width: 800px) {
     padding: 0rem;
@@ -28,6 +29,7 @@ const ShortBioText = styled.h3`
   text-align: left;
   font-family: "Montserrat";
   padding-left: 2rem;
+  font-size: 1.5rem;
 
   @media (min-width: 800px) {
     margin-right: 20rem;
@@ -42,6 +44,7 @@ const AboutText = styled.p`
   text-align: left;
   font-family: "FiraSans";
   padding-left: 2rem;
+  font-size: 1.2rem;
 
   @media (min-width: 800px) {
     margin-right: 20rem;
@@ -59,29 +62,15 @@ const Home = ({}) => {
       <Container>
         <Title>Rosalie Prom</Title>
         <ShortBioText>
-          Front-End Engineer @ CommBank Innovation Labs | UI/UX | Blockchain |
-          Code Like a Girl AU | Playmakers UTS | #100DaysOfCode
+          Front-End Engineer @ Commonwealth Bank Innovation Labs | UI/UX |
+          Blockchain | Code Like a Girl AU | #100DaysOfCode
         </ShortBioText>
         <AboutText>
           I'm a Junior Front-End Developer at CommBank. I work with: React,
-          Typescript, CSS, Accessibility, UX Research, Blockchain and UI Design.
-          I'm continuing to learn and train myself new and different things by
-          doing the #100DaysOfCode challenge! You can follow my progress on my
-          Github or Instagram.
-        </AboutText>
-        <AboutText>
-          I'm also a university graduate who studied Information Technology at
-          the University of Technology, Sydney. As a student, I have also been a
-          leader of student societies and an active member of Women in
-          Engineering and IT. I have organised a hackathon in the past with
-          ProgSoc and a games jam with UTS Playmakers.
-        </AboutText>
-        <AboutText>
-          I aspire to become a Full Stack Developer or a Solutions Architect or
-          a Blockchain enthusiast of some kind. I'm passionate about current
-          trends in technology, community and education. I volunteer some of my
-          spare time helping local communities thrive. In my spare time I like
-          gaming and weightlifting!
+          Typescript, CSS, UX Research, Blockchain and UI Design. I'm continuing
+          to learn and train myself new and different things by doing the
+          #100DaysOfCode challenge! You can follow my progress on my Github or
+          Instagram.
         </AboutText>
         <AboutText>I'm currently not available for freelance work.</AboutText>
       </Container>

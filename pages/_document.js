@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <link
             rel="icon"
             href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/sun-with-face_1f31e.png"
