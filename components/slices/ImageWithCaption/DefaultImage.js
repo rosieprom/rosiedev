@@ -4,14 +4,14 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: block;
+  text-align: center;
   margin: 0;
   padding: 0;
 `;
 
 const ImageContainer = styled.img`
-  display: inline-block;
-  width: 90%;
-  height: 20%;
+  width: 80%;
+  height: 10%;
   margin: 2rem;
 `;
 
@@ -21,12 +21,12 @@ const ImageContainer = styled.img`
 const DefaultImage = ({ slice }) => {
   const imageUrl = slice.primary.image_banner.url;
   const imageAlt = slice.primary.image_banner.alt;
-  // const caption = slice.primary.caption;
+  const description = slice.primary.description;
 
   return (
     <Container>
       <ImageContainer src={imageUrl} alt={imageAlt} />
-      {/* <Caption caption={caption} /> */}
+      <Caption description={description} />
     </Container>
   );
 };

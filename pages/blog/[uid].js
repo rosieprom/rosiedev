@@ -3,6 +3,7 @@ import Layout from "../../components/layout";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import styled from "styled-components";
+import PostDate from "../../components/PostList/PostDate";
 import SliceZone from "../../components/SliceZone";
 import { Client } from "../../utils/prismicHelpers";
 import Link from "next/link";
@@ -10,7 +11,6 @@ import Link from "next/link";
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
-  padding-left: 2rem;
 `;
 
 const Container = styled.div`
@@ -54,6 +54,10 @@ const BackLink = styled.p`
   }
 `;
 
+const HeaderContainer = styled.div`
+  padding: 2rem;
+`;
+
 const Post = ({ post }) => {
   if (post) {
     const titled = RichText.asText(post.data.title).length !== 0;
@@ -68,7 +72,11 @@ const Post = ({ post }) => {
               <a>← back to blogs</a>
             </BackLink>
           </Link>
-          <Title>{title}</Title>
+          <HeaderContainer>
+            <Title>{title}</Title>
+            <PostDate date={post.data.date} />
+          </HeaderContainer>
+
           <SliceZone sliceZone={post.data.body1} />
         </Container>
         <Footer />

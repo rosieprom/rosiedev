@@ -25,7 +25,7 @@ const MenuIcon = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 10;
+  z-index: 100;
 
   &:focus {
     outline: none;
@@ -73,13 +73,14 @@ const Links = styled.div`
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 99;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     transition: transform 0.3s ease-in-out;
   }
 `;
 
 const PageLink = styled.p`
-  padding: 2rem;
+  padding: 1rem;
   font-family: "FiraSans";
   font-weight: 500;
   list-style-type: none;

@@ -5,7 +5,7 @@ import styled from "styled-components";
 const BlogPostTime = styled.p`
   color: ${(props) => props.theme.text.primary};
   font-family: "FiraSans";
-  font-weight: 500;
+  font-size: 1rem;
 `;
 /**
  * Post list item date component

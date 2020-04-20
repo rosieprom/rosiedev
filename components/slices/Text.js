@@ -8,10 +8,11 @@ const Container = styled.div`
   margin: 0 auto;
 `;
 
-const ShortDescription = styled.p`
+const BlogText = styled.p`
   text-align: left;
   font-family: "FiraSans";
   margin: 1rem 5rem;
+  font-size: 1.2rem;
 
   @media (max-width: 800px) {
     padding: 0rem;
@@ -21,13 +22,13 @@ const ShortDescription = styled.p`
 
 const Text = ({ slice }) => (
   <Container>
-    <ShortDescription>
+    <BlogText>
       <RichText
         render={slice.primary.text}
         linkResolver={linkResolver}
         serializeHyperlink={customLink}
       />
-    </ShortDescription>
+    </BlogText>
   </Container>
 );
 

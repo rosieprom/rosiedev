@@ -8,9 +8,9 @@ const ImageLabel = styled.p`
   font-family: "FiraSans";
 `;
 
-const Caption = ({ caption }) => {
-  if (RichText.asText(caption) !== "") {
-    return <ImageLabel>{RichText.asText(caption)}</ImageLabel>;
+const Caption = ({ description }) => {
+  if (RichText.asText(description) !== "") {
+    return <ImageLabel>{RichText.asText(description)}</ImageLabel>;
   }
 
   return null;
