@@ -1,5 +1,5 @@
 import React from ".react";
-import { Date } from ".prismic-reactjs";
+import { Date } from "prismic-reactjs";
 import styled from ".styled-components";
 
 const BlogPostTime = styled.p`
