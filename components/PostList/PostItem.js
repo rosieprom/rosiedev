@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { RichText } from "prismic-reactjs";
-import PostDate from "./postDate";
-import FirstParagraph from "./firstParagraph";
+import PostDate from "./PostDate";
+import FirstParagraph from "./FirstParagraph";
 import { hrefResolver, linkResolver } from "../../prismic-configuration";
 import styled from "styled-components";
 
