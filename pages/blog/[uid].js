@@ -3,7 +3,7 @@ import Layout from "../../components/layout";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import styled from "styled-components";
-import SliceZone from "../../components/sliceZone";
+import SliceZone from "../../components/SliceZone";
 import { Client } from "../../utils/prismicHelpers";
 import Link from "next/link";
 

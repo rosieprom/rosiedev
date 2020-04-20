@@ -1,5 +1,5 @@
 import React from "react";
-import Caption from "./caption";
+import Caption from "./Caption";
 import styled from "styled-components";
 
 const LargeContainer = styled.div`

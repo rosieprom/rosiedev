@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import DefaultImage from "./defaultImage";
-import FullWidthImage from "./fullWidthImage";
+import DefaultImage from "./DefaultImage";
+import FullWidthImage from "./FullWidthImage";
 import styled from "styled-components";
 
 /**
