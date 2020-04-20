@@ -1,6 +1,6 @@
-import React from "react";
-import { Date } from "prismic-reactjs";
-import styled from "styled-components";
+import React from ".react";
+import { Date } from ".prismic-reactjs";
+import styled from ".styled-components";
 
 const BlogPostTime = styled.p`
   color: ${(props) => props.theme.text.primary};

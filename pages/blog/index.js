@@ -2,7 +2,7 @@ import Prismic from "prismic-javascript";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Layout from "../../components/layout";
-import PostList from "../../components/postList";
+import PostList from "../../components/PostList";
 import { Client } from "../../utils/prismicHelpers";
 import SetupRepo from "../../components/setupRepo";
 import styled from "styled-components";
