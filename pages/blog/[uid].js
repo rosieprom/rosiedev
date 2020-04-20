@@ -1,9 +1,9 @@
 import { RichText } from "prismic-reactjs";
-import Layout from "../../components/Layout";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
+import Layout from "../../components/layout";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import styled from "styled-components";
-import SliceZone from "../../components/SliceZone";
+import SliceZone from "../../components/sliceZone";
 import { Client } from "../../utils/prismicHelpers";
 import Link from "next/link";
 

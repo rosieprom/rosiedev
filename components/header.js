@@ -2,7 +2,7 @@ import Link from "next/link";
 import styled from "styled-components";
 import useDarkMode from "use-dark-mode";
 import React, { useState, useEffect } from "react";
-import Toggle from "./Toggle";
+import Toggle from "./toggle";
 import { lightTheme, darkTheme } from "../theme";
 
 const HeaderContainer = styled.div`

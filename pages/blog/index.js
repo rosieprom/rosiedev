@@ -1,10 +1,10 @@
 import Prismic from "prismic-javascript";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import Layout from "../../components/Layout";
-import PostList from "../../components/PostList";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Layout from "../../components/layout";
+import PostList from "../../components/postList";
 import { Client } from "../../utils/prismicHelpers";
-import SetupRepo from "../../components/SetupRepo";
+import SetupRepo from "../../components/setupRepo";
 import styled from "styled-components";
 
 const Title = styled.h1`
