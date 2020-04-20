@@ -1,4 +1,4 @@
-import React from ".react";
+import React from "react";
 import { Date } from "prismic-reactjs";
 import styled from ".styled-components";
 
