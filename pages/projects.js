@@ -3,6 +3,8 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import Cards from "../components/cards";
 import styled from "styled-components";
+import Prismic from "prismic-javascript";
+import { Client } from "../utils/prismicHelpers";
 
 const Container = styled.div`
   display: flex;
@@ -28,52 +30,38 @@ const ShortText = styled.h3`
   padding-left: 2rem;
 `;
 
-const Projects = ({}) => {
+const Projects = ({ doc, posts }) => {
   return (
     <Layout>
       <Header />
-      <Container>
-        <Title>Projects</Title>
-        <ShortText>Some of the projects I've worked on in the past.</ShortText>
-        <Cards
-          items={[
-            {
-              src: "/trianglesoflight.jpg",
-              alt: "Triangle of Lights",
-              title: "Triangle of Lights",
-              shortDescription:
-                "Arduino physical prototype to reflect touch and light feedback. This project was made for the UTS FEIT BUILD Program",
-              linkName: "Github",
-              url: "https://github.com/developerpeachy/TrianglesOfLight",
-              linkNameTwo: "Instagram",
-              urlTwo: "https://www.instagram.com/p/Bz0WP_Og_A9/",
-            },
-            {
-              src: "/alphawallet_website.png",
-              alt: "AlphaWallet.com",
-              title: "AlphaWallet",
-              shortDescription:
-                "AlphaWallet's website was made with React, TailwindCSS and hosted off Github and Netlify.",
-              linkName: "Website",
-              url: "https://alphawallet.com/",
-            },
-            {
-              src: "/ethviewer.JPG",
-              alt: "ETHViewer XR",
-              title: "ETHViewer - Interactive Design",
-              shortDescription:
-                "Did a DataVis project to demonstrate how Ethereum mining works in Blockchain on a low-level. I used Unity C#, EPICentre UNSW and VR Equipment.",
-              linkName: "Ethviewer",
-              url: "http://ethviewer.live/",
-              linkNameTwo: "Epicenter",
-              urlTwo: "http://epicentre.matters.today/",
-            },
-          ]}
-        />
-      </Container>
+      {doc && (
+        <Container>
+          <Title>Projects</Title>
+          <ShortText>
+            Some of the projects I've worked on in the past.
+          </ShortText>
+          <Cards posts={posts} />
+        </Container>
+      )}
       <Footer />
     </Layout>
   );
+};
+
+Projects.getInitialProps = async function ({ req }) {
+  try {
+    const doc = await Client(req).getSingle("work");
+
+    const posts = await Client(req).query(
+      Prismic.Predicates.at("document.type", "work")
+    );
+    return {
+      doc,
+      posts: posts ? posts.results : [],
+    };
+  } catch (error) {
+    return error;
+  }
 };
 
 export default Projects;

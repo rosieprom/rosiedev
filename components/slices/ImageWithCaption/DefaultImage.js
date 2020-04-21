@@ -10,9 +10,15 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.img`
-  width: 80%;
+  width: 50%;
   height: 10%;
   margin: 2rem;
+
+  @media (max-width: 1094px) {
+    width: 90%;
+    height: 10%;
+    margin: 1rem;
+  }
 `;
 
 /**

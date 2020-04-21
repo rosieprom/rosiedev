@@ -49,6 +49,7 @@ Blog.getInitialProps = async function ({ req }) {
       Prismic.Predicates.at("document.type", "blog"),
       { orderings: "[my.blog.date desc]" }
     );
+    // console.log(JSON.stringify(posts));
     return {
       doc,
       posts: posts ? posts.results : [],
