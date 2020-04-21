@@ -1,4 +1,17 @@
 import styled from "styled-components";
+import { RichText } from "prismic-reactjs";
+import React from "react";
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 5rem;
+
+  @media (max-width: 1094px) {
+    padding: 0.5rem;
+  }
+`;
 
 const Card = styled.div`
   padding: 1rem;
@@ -9,7 +22,7 @@ const Card = styled.div`
   box-sizing: border-box;
   display: flex;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1094px) {
     display: block;
     margin: 0;
   }
@@ -28,7 +41,7 @@ const Content = styled.div`
   flex: 2;
   padding: 2rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1094px) {
     padding: 1rem;
   }
 `;
@@ -38,7 +51,7 @@ const Title = styled.h1`
   font-family: "Montserrat-Bold";
   padding-left: 2rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1094px) {
     padding: 0rem;
   }
 `;
@@ -48,7 +61,7 @@ const ShortDescription = styled.h4`
   font-family: "Montserrat";
   padding-left: 2rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1094px) {
     padding: 0rem;
   }
 `;
@@ -58,15 +71,15 @@ const CardFooter = styled.div`
   padding: 1rem;
   justify-content: flex-end;
 
-  @media (max-width: 800px) {
+  @media (max-width: 1094px) {
     justify-content: center;
   }
 `;
 
 const CustomButton = styled.button`
-  background-color: ${props => props.theme.bg.primary};
-  border: 1px solid ${props => props.theme.text.primary};
-  color: ${props => props.theme.text.primary};
+  background-color: ${(props) => props.theme.bg.primary};
+  border: 1px solid ${(props) => props.theme.text.primary};
+  color: ${(props) => props.theme.text.primary};
   padding: 0.5rem 1rem;
   border-radius: 10px;
   display: inline-flex;
@@ -74,8 +87,8 @@ const CustomButton = styled.button`
   margin: 0.5rem;
 
   &:hover {
-    background-color: ${props => props.theme.text.primary};
-    color: ${props => props.theme.bg.secondary};
+    background-color: ${(props) => props.theme.text.primary};
+    color: ${(props) => props.theme.bg.secondary};
   }
 `;
 
@@ -87,56 +100,64 @@ const Text = styled.span`
   font: 1.2em "Fira Sans", sans-serif;
 `;
 
-function Cards(props) {
+const Cards = ({ posts }) => {
   return (
-    <>
-      {props.items.map((item, index) => (
-        <Card key={index}>
+    <Container>
+      {posts.map((post) => (
+        <Card key={post.uid}>
           <ImgContainer>
-            <Img src={item.src} alt={item.alt} />
+            <Img src={post.data.image.url} alt={post.data.image.alt} />
           </ImgContainer>
 
           <Content>
-            <Title>{item.title}</Title>
-            <ShortDescription>{item.shortDescription}</ShortDescription>
-            <CardFooter>
-              {item.url ? (
-                <BlankLink
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <CustomButton
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Text>{item.linkName}</Text>
-                  </CustomButton>
-                </BlankLink>
-              ) : null}
+            {post.data.project && (
+              <Title>{RichText.asText(post.data.project)}</Title>
+            )}
+            {post.data.volunteeringtitle && (
+              <Title>{RichText.asText(post.data.volunteeringtitle)}</Title>
+            )}
 
-              {item.urlTwo ? (
+            <ShortDescription>
+              {RichText.asText(post.data.about)}
+            </ShortDescription>
+            <CardFooter>
+              {post.data.link.url && post.data.link_one_text && (
                 <BlankLink
-                  href={item.urlTwo}
+                  href={post.data.link.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <CustomButton
-                    href={item.url}
+                    href={post.data.link.url}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Text>{item.linkNameTwo}</Text>
+                    <Text>{RichText.asText(post.data.link_one_text)}</Text>
                   </CustomButton>
                 </BlankLink>
-              ) : null}
+              )}
+
+              {post.data.link2.url && post.data.link_two_text && (
+                <BlankLink
+                  href={post.data.link2.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <CustomButton
+                    href={post.data.link2.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Text>{RichText.asText(post.data.link_two_text)}</Text>
+                  </CustomButton>
+                </BlankLink>
+              )}
             </CardFooter>
           </Content>
         </Card>
       ))}
-    </>
+    </Container>
   );
-}
+};
 
 export default Cards;
