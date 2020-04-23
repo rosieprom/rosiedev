@@ -9,14 +9,12 @@ import styled from "styled-components";
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
-  padding-left: 2rem;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-top: 5rem;
+  margin: 5rem;
 
   @media (max-width: 800px) {
     padding: 0.5rem;
@@ -49,7 +47,7 @@ Blog.getInitialProps = async function ({ req }) {
       Prismic.Predicates.at("document.type", "blog"),
       { orderings: "[my.blog.date desc]" }
     );
-    // console.log(JSON.stringify(posts));
+    //console.log(JSON.stringify(posts));
     return {
       doc,
       posts: posts ? posts.results : [],

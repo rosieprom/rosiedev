@@ -3,24 +3,22 @@ import { RichText } from "prismic-reactjs";
 import React from "react";
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  margin-top: 5rem;
-
   @media (max-width: 1094px) {
     padding: 0.5rem;
   }
 `;
 
 const Card = styled.div`
-  padding: 1rem;
-  margin: 2rem;
+  margin: 2rem 0rem;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 5px;
   box-sizing: border-box;
   display: flex;
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
 
   @media (max-width: 1094px) {
     display: block;
@@ -39,7 +37,7 @@ const Img = styled.img`
 
 const Content = styled.div`
   flex: 2;
-  padding: 2rem;
+  padding: 3rem;
 
   @media (max-width: 1094px) {
     padding: 1rem;
@@ -49,7 +47,6 @@ const Content = styled.div`
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
-  padding-left: 2rem;
 
   @media (max-width: 1094px) {
     padding: 0rem;
@@ -59,7 +56,6 @@ const Title = styled.h1`
 const ShortDescription = styled.h4`
   text-align: left;
   font-family: "Montserrat";
-  padding-left: 2rem;
 
   @media (max-width: 1094px) {
     padding: 0rem;

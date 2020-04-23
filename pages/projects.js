@@ -9,8 +9,7 @@ import { Client } from "../utils/prismicHelpers";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-top: 5rem;
+  margin: 5rem;
 
   @media (max-width: 800px) {
     padding: 0.5rem;
@@ -20,14 +19,12 @@ const Container = styled.div`
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
-  padding-left: 2rem;
 `;
 
 const ShortText = styled.h3`
   font-weight: 300;
   text-align: left;
   font-family: "Montserrat";
-  padding-left: 2rem;
 `;
 
 const Projects = ({ doc, posts }) => {

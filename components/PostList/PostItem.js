@@ -3,38 +3,69 @@ import Link from "next/link";
 import { RichText } from "prismic-reactjs";
 import PostDate from "./PostDate";
 import FirstParagraph from "./FirstParagraph";
+import ImageSlice from "./ImageSlice";
 import { hrefResolver, linkResolver } from "../../prismic-configuration";
 import styled from "styled-components";
 
 const BlogPost = styled.div`
-  margin: 2rem;
+  display: flex;
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: 1094px) {
+    display: block;
+    margin: 0;
+  }
 `;
 
-const BlogTitle = styled.h2`
-  font-family: "FiraSans";
-  font-weight: 500;
-  list-style-type: none;
+const Content = styled.div`
+  flex: 1.5;
+  padding: 2rem;
+  align-self: center;
 
-  a {
-    color: ${(props) => props.theme.text.primary};
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.15em;
-    cursor: pointer;
-
-    display: inline-block;
-    position: relative;
+  @media (max-width: 1094px) {
+    padding: 1rem;
   }
+`;
 
-  a:after {
-    color: ${(props) => props.theme.text.secondary};
-    cursor: pointer;
-    text-decoration: underline;
+const Text = styled.span`
+  font: 1.2em "Fira Sans", sans-serif;
+`;
+
+const CardFooter = styled.div`
+  display: flex;
+  padding: 1rem;
+  justify-content: flex-end;
+
+  @media (max-width: 1094px) {
+    justify-content: center;
   }
-  a:hover {
-    color: ${(props) => props.theme.text.primary};
-    cursor: pointer;
-    text-decoration: underline;
+`;
+
+const CustomButton = styled.button`
+  background-color: ${(props) => props.theme.bg.primary};
+  border: 1px solid ${(props) => props.theme.text.primary};
+  color: ${(props) => props.theme.text.primary};
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  display: inline-flex;
+  text-align: center;
+  margin: 0.5rem;
+
+  &:hover {
+    background-color: ${(props) => props.theme.text.primary};
+    color: ${(props) => props.theme.bg.secondary};
+  }
+`;
+
+const Title = styled.h1`
+  text-align: left;
+  font-family: "Montserrat-Bold";
+
+  @media (max-width: 1094px) {
+    padding: 0rem;
   }
 `;
 
@@ -48,13 +79,19 @@ const PostItem = ({ post }) => {
 
   return (
     <BlogPost>
-      <Link as={linkResolver(post)} href={hrefResolver(post)}>
-        <BlogTitle>
-          <a>{title}</a>
-        </BlogTitle>
-      </Link>
-      <PostDate date={post.data.date} />
-      <FirstParagraph sliceZone={post.data.body1} textLimit={300} />
+      <ImageSlice sliceZone={post.data.body1} />
+      <Content>
+        <Title>{title}</Title>
+        <PostDate date={post.data.date} />
+        <FirstParagraph sliceZone={post.data.body1} textLimit={300} />
+        <CardFooter>
+          <Link as={linkResolver(post)} href={hrefResolver(post)}>
+            <CustomButton href={hrefResolver(post)}>
+              <Text>Read More</Text>
+            </CustomButton>
+          </Link>
+        </CardFooter>
+      </Content>
     </BlogPost>
   );
 };

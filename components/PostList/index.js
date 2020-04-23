@@ -5,12 +5,7 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-top: 5rem;
-
-  @media (max-width: 800px) {
-    padding: 0.5rem;
-  }
+  margin: 2rem 0;
 `;
 /**
  * Post list component
