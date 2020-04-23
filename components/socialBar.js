@@ -10,7 +10,7 @@ const Container = styled.div`
 `;
 
 const StyledIcon = styled.svg`
-  fill: ${props => props.theme.text.primary};
+  fill: ${(props) => props.theme.text.primary};
   opacity: 0.6;
   transition: 0.3s;
   &:hover {
@@ -22,7 +22,11 @@ function SocialBar() {
   return (
     <Container>
       {/* Twitter */}
-      <a href="https://twitter.com/rosalie_dev" target="_blank">
+      <a
+        href="https://twitter.com/rosalie_dev"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -33,7 +37,11 @@ function SocialBar() {
         </StyledIcon>
       </a>
       {/* Instagram */}
-      <a href="https://www.instagram.com/rosie.dev/" target="_blank">
+      <a
+        href="https://www.instagram.com/rosie.dev/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -45,7 +53,11 @@ function SocialBar() {
         </StyledIcon>
       </a>
       {/* Email */}
-      <a href="mailto:rosalinda.prom@gmail.com" target="_blank">
+      <a
+        href="mailto:rosalinda.prom@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -56,7 +68,11 @@ function SocialBar() {
         </StyledIcon>
       </a>
       {/* Github */}
-      <a href="https://github.com/developerpeachy" target="_blank">
+      <a
+        href="https://github.com/developerpeachy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -74,6 +90,7 @@ function SocialBar() {
       <a
         href="https://www.linkedin.com/in/rosalinda-prom-15508a85/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +103,11 @@ function SocialBar() {
         </StyledIcon>
       </a>
       {/* Telegram */}
-      <a href="https://t.me/rosalieprom" target="_blank">
+      <a
+        href="https://t.me/rosalieprom"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -100,6 +121,7 @@ function SocialBar() {
       <a
         href="https://open.spotify.com/user/1271090101?si=rRp14tFxSkqpXFEMeRScDg"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <StyledIcon
           xmlns="http://www.w3.org/2000/svg"

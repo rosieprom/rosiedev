@@ -17,7 +17,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  margin-top: 5rem;
 
   @media (max-width: 800px) {
     padding: 0.5rem;
@@ -30,6 +29,10 @@ const BackLink = styled.p`
   font-weight: 500;
   list-style-type: none;
   cursor: pointer;
+
+  @media (max-width: 800px) {
+    margin-top: 5rem;
+  }
 
   a {
     color: ${(props) => props.theme.text.primary};
@@ -67,16 +70,15 @@ const Post = ({ post }) => {
       <Layout>
         <Header />
         <Container>
-          <Link href="/blog" as="/blog">
-            <BackLink>
-              <a>← back to blogs</a>
-            </BackLink>
-          </Link>
+          <BackLink>
+            <a href="/blog" as="/blog">
+              ← back to blogs
+            </a>
+          </BackLink>
           <HeaderContainer>
             <Title>{title}</Title>
             <PostDate date={post.data.date} />
           </HeaderContainer>
-
           <SliceZone sliceZone={post.data.body1} />
         </Container>
         <Footer />
