@@ -6,6 +6,10 @@ const BlogPostTime = styled.p`
   color: ${(props) => props.theme.text.primary};
   font-family: "FiraSans";
   font-size: 1.3rem;
+
+  @media max-width(800px) {
+    font-size: 1rem;
+  }
 `;
 /**
  * Post list item date component

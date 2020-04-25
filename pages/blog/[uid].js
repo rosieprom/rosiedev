@@ -11,6 +11,10 @@ const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
   font-size: 3rem;
+
+  @media max-width (800px) {
+    font-size: 2rem;
+  }
 `;
 
 const Container = styled.div`
