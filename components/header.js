@@ -34,7 +34,7 @@ const MenuIcon = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${(props) => props.theme.text.secondary};
+    background: ${(props) => props.theme.text.primary};
     border-radius: 10px;
     transition: all 0.3s linear;
     position: relative;
