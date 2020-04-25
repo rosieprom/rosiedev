@@ -6,11 +6,11 @@ import styled from "styled-components";
 import PostDate from "../../components/PostList/PostDate";
 import SliceZone from "../../components/SliceZone";
 import { Client } from "../../utils/prismicHelpers";
-import Link from "next/link";
 
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
+  font-size: 3rem;
 `;
 
 const Container = styled.div`

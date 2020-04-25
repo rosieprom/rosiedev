@@ -11,10 +11,18 @@ const Container = styled.div`
 
 const StyledIcon = styled.svg`
   fill: ${(props) => props.theme.text.primary};
-  opacity: 0.6;
-  transition: 0.3s;
+  transition: 0.1s;
   &:hover {
-    opacity: 1;
+    fill: ${(props) => props.theme.bg.secondary};
+    animation: grow 3s;
+    @keyframes grow {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(3);
+      }
+    }
   }
 `;
 

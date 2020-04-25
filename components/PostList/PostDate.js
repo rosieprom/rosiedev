@@ -5,7 +5,7 @@ import styled from "styled-components";
 const BlogPostTime = styled.p`
   color: ${(props) => props.theme.text.primary};
   font-family: "FiraSans";
-  font-size: 1rem;
+  font-size: 1.3rem;
 `;
 /**
  * Post list item date component
@@ -21,7 +21,7 @@ const PostDate = ({ date }) => {
     Date(date)
   );
 
-  return <BlogPostTime>{displayDate}</BlogPostTime>;
+  return <BlogPostTime>Published on: {displayDate}</BlogPostTime>;
 };
 
 export default PostDate;
