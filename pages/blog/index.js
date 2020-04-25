@@ -9,16 +9,24 @@ import styled from "styled-components";
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
+  font-size: 3rem;
 `;
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5rem;
+  margin: 5rem 3rem;
 
   @media (max-width: 800px) {
     padding: 0.5rem;
+    margin: 2rem 0.5rem;
   }
+`;
+
+const ShortText = styled.h3`
+  font-weight: 300;
+  text-align: left;
+  font-family: "Montserrat";
 `;
 
 const Blog = ({ doc, posts }) => {
@@ -28,6 +36,10 @@ const Blog = ({ doc, posts }) => {
         <Header />
         <Container>
           <Title>Blogs</Title>
+          <ShortText>
+            I don't usually write blogs, but when I do I hope you would find
+            them interesting.
+          </ShortText>
           <PostList posts={posts} />
         </Container>
         <Footer />

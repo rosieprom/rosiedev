@@ -9,16 +9,23 @@ import { Client } from "../utils/prismicHelpers";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5rem;
+  padding: 2rem;
+  margin: 3rem 3rem;
 
   @media (max-width: 800px) {
     padding: 0.5rem;
+    margin: 2rem 0.5rem;
   }
 `;
 
 const Title = styled.h1`
   text-align: left;
   font-family: "Montserrat-Bold";
+  font-size: 3rem;
+
+  @media (max-width: 800px) {
+    margin-top: 5rem;
+  }
 `;
 
 const ShortText = styled.h3`

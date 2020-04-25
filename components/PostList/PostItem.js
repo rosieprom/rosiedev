@@ -31,7 +31,7 @@ const Content = styled.div`
 `;
 
 const Text = styled.span`
-  font: 1.2em "Fira Sans", sans-serif;
+  font: 1rem "Fira Sans", sans-serif;
 `;
 
 const CardFooter = styled.div`
@@ -48,15 +48,16 @@ const CustomButton = styled.button`
   background-color: ${(props) => props.theme.bg.primary};
   border: 1px solid ${(props) => props.theme.text.primary};
   color: ${(props) => props.theme.text.primary};
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   border-radius: 10px;
   display: inline-flex;
   text-align: center;
   margin: 0.5rem;
 
   &:hover {
-    background-color: ${(props) => props.theme.text.primary};
-    color: ${(props) => props.theme.bg.secondary};
+    border: 1px solid ${(props) => props.theme.text.secondary};
+    background-color: ${(props) => props.theme.text.secondary};
+    color: ${(props) => props.theme.text.primary};
   }
 `;
 

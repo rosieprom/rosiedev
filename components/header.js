@@ -132,7 +132,7 @@ const LightDarkSwitch = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.text.primary};
-    color: ${(props) => props.theme.bg.secondary};
+    color: ${(props) => props.theme.bg.primary};
   }
 `;
 
