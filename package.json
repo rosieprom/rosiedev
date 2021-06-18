@@ -27,7 +27,7 @@
     "use-dark-mode": "^2.3.1"
   },
   "engines": {
-    "node": "10.x"
+    "node": "14.x"
   },
   "devDependencies": {
     "@types/styled-components": "^5.0.1",

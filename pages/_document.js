@@ -21,7 +21,7 @@ class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="description"
-            content="Rosalie Prom | Front-End Developer"
+            content="Rosie Prom | Front-End Developer"
           />
           <meta name="robots" content="all" />
           <meta name="googlebot" content="all" />
@@ -30,23 +30,14 @@ class MyDocument extends Document {
           {/* Twitter meta tags */}
           <meta
             name="twitter:card"
-            content="Rosalie Prom | Front-End Developer"
+            content="Rosie Prom | Front-End Developer"
           />
-          <meta name="twitter:site" content="@rosalie_dev" />
-          <meta name="twitter:title" content="Rosalie Prom" />
+          <meta name="twitter:site" content="@rosieprom" />
+          <meta name="twitter:title" content="Rosie Prom" />
           <meta
             name="twitter:description"
             content="Sydney based React developer."
           />
-
-          {/* Facebook meta tags */}
-          <meta property="og:type" content="article" />
-          <meta
-            property="og:title"
-            content="Rosalie Prom | Front-End Developer"
-          />
-          <meta property="og:site_name" content="RosalieProm" />
-          <meta property="og:url" content="https://www.rosalie.dev" />
         </Head>
         <body>
           <Main />
