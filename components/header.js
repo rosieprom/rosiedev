@@ -148,7 +148,7 @@ function Header() {
 
   return (
     <HeaderContainer>
-      <title>Rosalie Prom ☾</title>
+      <title>Rosie Prom ☾</title>
       <MenuIcon open={open} onClick={() => setOpen(!open)}>
         <div />
         <div />
@@ -156,7 +156,7 @@ function Header() {
       </MenuIcon>
       <Links open={open}>
         {[
-          { title: "Rosalie Prom", route: "/" },
+          { title: "Rosie Prom", route: "/" },
           { title: "Projects", route: "/projects" },
           { title: "Volunteering", route: "/volunteering" },
           { title: "Blog", route: "/blog" },

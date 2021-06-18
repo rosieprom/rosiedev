@@ -14,15 +14,6 @@ const StyledIcon = styled.svg`
   transition: 0.1s;
   &:hover {
     fill: ${(props) => props.theme.bg.secondary};
-    animation: grow 3s;
-    @keyframes grow {
-      from {
-        transform: scale(1);
-      }
-      to {
-        transform: scale(3);
-      }
-    }
   }
 `;
 
@@ -31,7 +22,7 @@ function SocialBar() {
     <Container>
       {/* Twitter */}
       <a
-        href="https://twitter.com/rosalie_dev"
+        href="https://twitter.com/rosieprom"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -77,7 +68,7 @@ function SocialBar() {
       </a>
       {/* Github */}
       <a
-        href="https://github.com/developerpeachy"
+        href="https://github.com/rosieprom"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -112,7 +103,7 @@ function SocialBar() {
       </a>
       {/* Telegram */}
       <a
-        href="https://t.me/rosalieprom"
+        href="https://t.me/rosieprom"
         target="_blank"
         rel="noopener noreferrer"
       >

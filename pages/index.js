@@ -65,10 +65,9 @@ const Home = ({}) => {
       <Header />
       <Container>
         <Title>
-          <span> Hey there </span> I'm Rosalie <span> and I'm a </span>
-          creative front-end developer<span>, </span>
-          UX designer <span> and </span>
-          blogger<span>.</span>
+          <span> Hey there </span> I'm Rosie <span> and I'm a </span>
+          creative front-end developer<span> based in </span>
+          Sydney, Australia<span>.</span>
         </Title>
       </Container>
       <Footer />
