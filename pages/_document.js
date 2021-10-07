@@ -26,18 +26,6 @@ class MyDocument extends Document {
           <meta name="robots" content="all" />
           <meta name="googlebot" content="all" />
           <meta property="og:image" content="" />
-
-          {/* Twitter meta tags */}
-          <meta
-            name="twitter:card"
-            content="Rosie Prom | Front-End Developer"
-          />
-          <meta name="twitter:site" content="@rosieprom" />
-          <meta name="twitter:title" content="Rosie Prom" />
-          <meta
-            name="twitter:description"
-            content="Sydney based React developer."
-          />
         </Head>
         <body>
           <Main />
